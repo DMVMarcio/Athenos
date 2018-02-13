@@ -1,0 +1,25 @@
+{
+  "name": "athenos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "marcio",
+  "license": "ISC",
+  "dependencies": {
+    "discord-anti-spam": "^1.1.1",
+    "discord-bans": "^2.2.2",
+    "discord-rpc-constructor": "^1.0.0",
+    "discord.js": "^11.3.0",
+    "jimp": "^0.2.28",
+    "meteor-ping": "^1.0.3",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.4",
+    "nick-generator": "^1.0.0",
+    "nicknames": "^1.0.2",
+    "ping": "^0.2.2"
+  }
+}
