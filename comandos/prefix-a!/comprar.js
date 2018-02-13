@@ -119,7 +119,7 @@ if (message.content.startsWith("a!comprar 4")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405069427894386688")){
 
-        message.reply("**Você já é tem XP x2!**");
+        message.reply("**Você já tem XP x2!**");
 
     } else {
 
@@ -148,7 +148,7 @@ if (message.content.startsWith("a!comprar 5")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405070139738816532")){
 
-        message.reply("**Você já é tem Coins x2!**");
+        message.reply("**Você já tem Coins x2!**");
 
     } else {
 
@@ -177,7 +177,7 @@ if (message.content.startsWith("a!comprar 6")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405084942255521813")){
 
-        message.reply("**Você já é tem Permissão para divulgar!**");
+        message.reply("**Você já tem Permissão para divulgar!**");
 
     } else {
 
@@ -235,7 +235,7 @@ if (message.content.startsWith("a!comprar 8")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405068787486818304")){
 
-        message.reply("**Você já é tem Comando de Lembrete!**");
+        message.reply("**Você já tem Comando de Lembrete!**");
 
     } else {
 
