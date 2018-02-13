@@ -100,7 +100,7 @@ client.on("message", message => {
 });
 
 
-client.login("NDAyNjA3NjY3MDM5Njk4OTQ0.DWNACw.lroB2DOWoUF_f_eXLJFWQ2wlmpU")
+client.login(process.env.token)
 
 fs.readdir("./eventos/", (err, files) => {
     if (err) return console.error("[ERRO] " + err);
@@ -129,11 +129,11 @@ client.on("message", message => {
 });
 
 
-client.login("NDAyNjA3NjY3MDM5Njk4OTQ0.DWNACw.lroB2DOWoUF_f_eXLJFWQ2wlmpU")
+client.login(process.env.token)
 
 
 const prefix = "a!";
-const token = "NDAyNjA3NjY3MDM5Njk4OTQ0.DWNACw.lroB2DOWoUF_f_eXLJFWQ2wlmpU";
+const token = process.env.token;
 const id = "402607667039698944"
 
 const configs = require('./jsons/config.json');
@@ -179,7 +179,7 @@ client.on("ready", () => {
     }, 1 * 60 * 1000)
 });
 
-client.login(token)
+client.login(process.env.token)
 
 client.on("message", (message) => {
 
@@ -903,7 +903,7 @@ async function getEval(message, args) {
 
         var msg12 = `**CÓDIGO:**\n\`\`\`js\n${code}\`\`\`\n**RESULTADO:**\n\`\`\`LDIF\n${evaled}\`\`\``
 
-        message.channel.sendMessage(msg12.replace(/NDAyNjA3NjY3MDM5Njk4OTQ0.DUsGPA.-hgdyzTE_8bszDX4VI0FjNVHb8E/g, `PORQUEDESEJASABER`))
+        message.channel.sendMessage(msg12.replace(/`${process.env.token}`/g, `PORQUEDESEJASABER`))
 
     } catch (err) {
         message.channel.sendMessage(`**CÓDIGO:**\n\`\`\`js\n${code}\`\`\`\n**ERRO:**\n\`\`\`LDIF\n${err}\`\`\``)
