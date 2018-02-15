@@ -2,6 +2,7 @@ var database = require("../../database.js")
 
 var userPART = new Set()
 var dica = new Set()
+var dica2 = new Set()
 let sortNUMERO = Math.round(Math.random() * 100)
 
 exports.run = (client, message, args) => {
@@ -90,7 +91,28 @@ exports.run = (client, message, args) => {
                         }
                     }
                 } else {
-                    message.reply("**Você não pode user este comando. :confused:**");
+                    message.reply("**Você não pode usar este comando. :confused:**");
+                }
+            }
+
+            if(message.content.startsWith("a!loteria fechar")) {
+                if(dcloteria.aberta) {
+                    if(dcloteria.aberta) {
+                        dcloteria.aberta = false
+                        dcloteria.save();
+                        message.guild.channels.get("410084948930854912").sendMessage({
+                            "embed": {
+                                "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Loteria finalizada. :confused:**",
+                                "color": 55512,
+                                "thumbnail": {
+                                    "url": "https://i.imgur.com/4JaNmFp.png"
+                                }
+                            }
+                        });
+                        message.reply("**Loteria fechada. :confused:**");
+                        delete require.cache[require.resolve(`./loteria.js`)];
+                } else {
+                    message.reply("**A loteria já está fechada. :confused**");
                 }
             }
 
@@ -157,18 +179,31 @@ exports.run = (client, message, args) => {
 
                 if(message.content.startsWith("a!loteria dica")) {
                     if(dcloteria.aberta) {
-                    if(dica.has(message.author.id)) return message.reply("**Você já usou sua dica. :confused:**");
-
+                    if(dica.has(message.author.id)){
+                    if(dica2.has(message.author.id)) {
+                        message.reply("**Todas as suas dicas já foram usadas. :confused:**");
+                    } else {
                     if (Math.round(Math.random() * 1) == 1) {
-                        dica.add(message.author.id);
+                        dica2.add(message.author.id);
                         message.reply("**Dica enviada no seu privado. :pencil:**");
                         message.author.sendMessage(`${message.author}, **O número é maior que ${dcloteria.numero - Math.round(Math.random() * 15)} e menor que ${dcloteria.numero + Math.round(Math.random() * 15)}. Boa sorte :smile:**`);
                     } else {
-                        dica.add(message.author.id);
+                        dica2.add(message.author.id);
                         message.reply("**Dica enviada no seu privado. :pencil:**");
                         message.author.sendMessage(`${message.author}, **Bem perto de ${dcloteria.numero - Math.round(Math.random() * 4) + Math.round(Math.random() * 3)}. Boa sorte :smile:**`);
                     }
-
+                }
+            } else {
+                if (Math.round(Math.random() * 1) == 1) {
+                    dica.add(message.author.id);
+                    message.reply("**Dica enviada no seu privado. :pencil:**");
+                    message.author.sendMessage(`${message.author}, **O número é maior que ${dcloteria.numero - Math.round(Math.random() * 15)} e menor que ${dcloteria.numero + Math.round(Math.random() * 15)}. Boa sorte :smile:**`);
+                } else {
+                    dica.add(message.author.id);
+                    message.reply("**Dica enviada no seu privado. :pencil:**");
+                    message.author.sendMessage(`${message.author}, **Bem perto de ${dcloteria.numero - Math.round(Math.random() * 4) + Math.round(Math.random() * 3)}. Boa sorte :smile:**`);
+                }
+            }
                     } else {
                         message.reply("**Não há uma loteria no momento. :confused:**");
                     }
@@ -177,7 +212,7 @@ exports.run = (client, message, args) => {
             } else {
                 message.channel.sendMessage({
                     "embed": {
-                        "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```a!loteria info\na!loteria part\na!loteria criar\na!loteria dica```",
+                        "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```a!loteria info\na!loteria part\na!loteria criar\na!loteria dica\na!loteria fechar```",
                         "color": 55512,
                         "thumbnail": {
                             "url": "https://i.imgur.com/4JaNmFp.png"
