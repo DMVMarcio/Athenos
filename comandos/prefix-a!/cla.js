@@ -13,15 +13,8 @@ exports.run = (client, message, args) => {
     }, function(erro, documento) {
 
         var nivel = 7 - documento.level
-        if(userCOL.has(message.author.id)){
-            message.reply("**Aguarde 10 segundos para usar novamente. :confused:**");
-        } else {
-        if (documento) {
 
-            userCOL.add(message.author.id)
-            setTimeout(function() {
-                userCOL.delete(message.author.id)
-            }, 10 * 1000)
+        if (documento) {
 
             if (!razaou.length < 1) {
 
@@ -905,8 +898,7 @@ exports.run = (client, message, args) => {
 
             pessoa.save()
         }
-    }
-
+        
     })
 
 }
