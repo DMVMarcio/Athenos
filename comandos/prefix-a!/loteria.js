@@ -111,7 +111,7 @@ exports.run = (client, message, args) => {
                         message.reply("**Loteria fechada. :confused:**");
                         delete require.cache[require.resolve(`./loteria.js`)];
                 } else {
-                    message.reply("**A loteria já está fechada. :confused**");
+                    message.reply("**A loteria já está fechada. :confused:**");
                 }
         }
 
