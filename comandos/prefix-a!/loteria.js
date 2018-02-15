@@ -161,10 +161,12 @@ exports.run = (client, message, args) => {
 
                     if (Math.round(Math.random() * 1) == 1) {
                         dica.add(message.author.id);
-                        message.reply(`**O número é maior que ${dcloteria.numero - Math.round(Math.random() * 15)} e menor que ${dcloteria.numero + Math.round(Math.random() * 15)}. Boa sorte :smile:**`);
+                        message.reply("**Dica enviada no seu privado. :pencil:**");
+                        message.author.sendMessage(`${message.author}, **O número é maior que ${dcloteria.numero - Math.round(Math.random() * 15)} e menor que ${dcloteria.numero + Math.round(Math.random() * 15)}. Boa sorte :smile:**`);
                     } else {
                         dica.add(message.author.id);
-                        message.reply(`**Bem perto de ${dcloteria.numero - Math.round(Math.random() * 4) + Math.round(Math.random() * 3)}. Boa sorte :smile:**`);
+                        message.reply("**Dica enviada no seu privado. :pencil:**");
+                        message.author.sendMessage(`${message.author}, **Bem perto de ${dcloteria.numero - Math.round(Math.random() * 4) + Math.round(Math.random() * 3)}. Boa sorte :smile:**`);
                     }
 
                     } else {
