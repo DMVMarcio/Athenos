@@ -5,6 +5,6 @@ exports.run = (client, message, args) => {
         }, 10000);
     })
     for (var i = 0; i < message.guild.roles.size; i++) {
-        console.log("ID: " + message.guild.roles.array()[i].id + " / Nome: " + message.guild.roles.array()[i].name);
+        message.channel.sendMessage("ID: " + message.guild.roles.array()[i].id + " / Nome: " + message.guild.roles.array()[i].name);
     }
 }
