@@ -1,6 +1,7 @@
 var database = require("../../database.js")
 
 var userPART = new Set()
+var userPART2 = new Set()
 var dica = new Set()
 var dica2 = new Set()
 let sortNUMERO = Math.round(Math.random() * 100)
@@ -117,7 +118,65 @@ exports.run = (client, message, args) => {
 
                 if(message.content.startsWith("a!loteria part")) {
                     if(dcloteria.aberta) {
-                        if(userPART.has(message.author.id)) return message.reply("**Você já participou. :confused:**");
+                        if(userPART.has(message.author.id)){
+                            if(userPART2.has(message.author.id)){
+                                message.reply("**Você já participou. :confused:**");
+                            } else {
+                        if(!razaod.length < 1) {
+                            if(parseInt(args[1]) > -1) {
+                                if(parseInt(args[1]) < 101) {
+
+                                    database.Users.findOne({
+                                        "_id": message.author.id
+                                    }, function (erro, documento) {
+
+                                        if(documento) {
+
+                                            if(parseInt(args[1]) == dcloteria.numero) {
+                                                documento.coins += dcloteria.valor
+                                                documento.save();
+                                                dcloteria.aberta = false
+                                                dcloteria.ganhador = message.author.id
+                                                dcloteria.save();
+                                                message.reply(`**Parabens, você acertou o numero e ganhou ${dcloteria.valor} coins. :gift:**`);
+                                                message.guild.channels.get("410084948930854912").sendMessage({
+                                                    "embed": {
+                                                        "description": `ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**<@${message.author.id}> Ganhou na loteria. :smile:**`,
+                                                        "color": 55512,
+                                                        "thumbnail": {
+                                                            "url": "https://i.imgur.com/4JaNmFp.png"
+                                                        }
+                                                    }
+                                                });
+                                                delete require.cache[require.resolve(`./loteria.js`)];
+                                            } else {
+                                                message.reply("**Você errou o número. :sob:**");
+                                                userPART2.add(message.author.id);
+                                            }
+
+                                        } else {
+                                            var pessoa = new database.Users({
+                                                _id: message.author.id,
+                                                level: 0,
+                                                xp: 0,
+                                                coins: 0
+                                            })
+                                            pessoa.save()
+                                        }
+
+                                    })
+
+                                } else {
+                                    message.reply("**Não pode ser maior que 100. :confused:**");
+                                }
+                            } else {
+                                message.reply("**Nao pode ser menos que 0. :confused:**");
+                            }
+                        } else {
+                            message.reply("**Diga um numero de 0 a 100**");
+                        }
+                    }
+                    } else {
                         if(!razaod.length < 1) {
                             if(parseInt(args[1]) > -1) {
                                 if(parseInt(args[1]) < 101) {
@@ -171,6 +230,7 @@ exports.run = (client, message, args) => {
                         } else {
                             message.reply("**Diga um numero de 0 a 100**");
                         }
+                    }
                     } else {
                         message.reply("**Loteria esta fechada. :confused:**");
                     }
