@@ -96,7 +96,6 @@ exports.run = (client, message, args) => {
             }
 
             if(message.content.startsWith("a!loteria fechar")) {
-                if(dcloteria.aberta) {
                     if(dcloteria.aberta) {
                         dcloteria.aberta = false
                         dcloteria.save();
@@ -114,7 +113,7 @@ exports.run = (client, message, args) => {
                 } else {
                     message.reply("**A loteria já está fechada. :confused**");
                 }
-            }
+        }
 
                 if(message.content.startsWith("a!loteria part")) {
                     if(dcloteria.aberta) {
