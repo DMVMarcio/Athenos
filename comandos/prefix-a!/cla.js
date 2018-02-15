@@ -6,13 +6,22 @@ exports.run = (client, message, args) => {
     let razaod = args.slice(1).join(' ');
     let razaot = args.slice(2).join(' ');
 
+    var userCOL = new Set()
+
     database.Users.findOne({
         "_id": message.author.id
     }, function(erro, documento) {
 
         var nivel = 7 - documento.level
-
+        if(userCOL.has(message.author.id)){
+            message.reply("**Aguarde 5 segundos para usar novamente. :confused:**");
+        } else {
         if (documento) {
+
+            userCOL.add(message.author.id)
+            setTimeout(function() {
+                userCOL.delete(message.author.id)
+            }, 5 * 1000)
 
             if (!razaou.length < 1) {
 
@@ -896,6 +905,7 @@ exports.run = (client, message, args) => {
 
             pessoa.save()
         }
+    }
 
     })
 
