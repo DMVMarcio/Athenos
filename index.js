@@ -891,6 +891,86 @@ client.on("message", message => {
     });
 });
 
+client.on("message", message => {
+    var f1 = new Set()
+    var f2 = new Set()
+    var f3 = new Set()
+    var f4 = new Set()
+    var f5 = new Set()
+    var f6 = new Set()
+
+        if (f1.has(message.author.id)) {
+    
+            if (f2.has(message.author.id)) {
+            
+                if (f3.has(message.author.id)) {
+            
+                    if (f4.has(message.author.id)) {
+            
+                        if (f5.has(message.author.id)) {
+            
+                            if (f6.has(message.author.id)) {
+            
+                                if (!message.guild.member(message.author.id).kickable) return message.reply("**Sorte que não tenho permissão para te kickar. :rage:**")
+                                client.guilds.get(message.guild.id).members.get(message.author.id).ban()
+                                message.reply("**Kickado por flood. :confused:**");
+
+                            } else {
+                    
+                                f6.add(message.author.id)
+                                setTimeout(function() {
+                                    f6.delete(message.author.id)
+                                }, 2150)
+                    
+                            }
+
+                        } else {
+                
+                            f5.add(message.author.id)
+                            setTimeout(function() {
+                                f5.delete(message.author.id)
+                            }, 2150)
+                
+                        }
+
+                    } else {
+            
+                        f4.add(message.author.id)
+                        setTimeout(function() {
+                            f4.delete(message.author.id)
+                        }, 2150)
+            
+                    }
+
+                } else {
+        
+                    f3.add(message.author.id)
+                    setTimeout(function() {
+                        f3.delete(message.author.id)
+                    }, 2150)
+        
+                }
+
+            } else {
+    
+                f2.add(message.author.id)
+                setTimeout(function() {
+                    f2.delete(message.author.id)
+                }, 2150)
+    
+            }            
+
+        } else {
+
+            f1.add(message.author.id)
+            setTimeout(function() {
+                f1.delete(message.author.id)
+            }, 2150)
+
+        }
+
+})
+
 async function getEval(message, args) {
     if (message.content.includes("token")) return message.reply("**Ta doidão?**");
     let code = args.join(' ');
