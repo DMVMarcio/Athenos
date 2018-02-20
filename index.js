@@ -157,7 +157,7 @@ client.on("ready", () => {
 
     const membrosNomes = string
     var statusIDO = ["idle", "dnd", "online", ]
-    var falas = ["Caso queira receber notificações de atualizações, novidades etc... vá em <#402608271153823754> !", "Lembre-se de respeitar as regras para melhor convivencia!", "Você pode mudar a cor do seu nome em <#403664026703233024>.", "É tanta gente que eu stalkeio que daqui a pouco o CSI me contrata.", "O amor é como um peido. Ninguém vê, mas quando a gente sente que está vindo fica com medo porque sabe que vai dar merda.", "Se bebe, não mude a senha do celular!", "Terminar o ensino médio é saber que você não está de férias e sim desempregado.", "A que ponto chegamos, disse o motorista do Uber.", "Ninguém te escuta, agora solta um peido pra ver!", "Você já ficou com muita gente feia, o que custa eu ser mais um?", "Poderia existir algum tutorial de conversa após o 'Humm...'", "Quando algo está errado, quer dizer que não está certo. O importante é o que importa.", "Só vim aqui dizer uma coisa: uma coisa.", "Estudos comprovam que os alunos que foram reprovados repetiram de ano.", "Antes de ser diagnosticado com depressão ou baixa autoestima, certifique-se de que não está rodeado por idiotas.", "Só vim avisar que não haverá sol esta noite.", "Muitas vezes a gente pensa que não pensa, mas a gente pensa, porque se a gente não pensasse, a gente não iria pensar que não pensa porque a gente não iria nem pensar.", "A mulher me ligou oferecendo ovo de colher, eu nem sabia que colher botava ovo.", "Divulgado resultado de uma pesquisa muito interessante. Concluíram, depois de anos de estudo que, quem festeja muitos aniversários, vive mais.", "Queria ser feio, e sou mesmo.", "O símbolo & não parece um carinha arrastando a bundinha no chão? Tá, parei...", "Ser jogar Asepxia na água o peixe vem sem espinha?", "Bom dia pra todo mundo, menos pra alguns.", "Não existe sacrifício sem sacrifício.", "Comunista é quem mora em comunidade né?", "Eu pensei tanto, que quando eu já tinha pensado não foi aquilo que eu estava pensando, por isso parei de pensar.", "Poucas coisas conseguem acabar com meu dia. Uma delas é a noite!", "Fiz uma limpa no meu Facebook, só deixei quem eu não removi.", "Hoje é o ontem de amanhã. E é o amanhã de ontem. E foi depois de amanhã, há dois dias atrás, será outo dia, da semana passada!", "Não autorizo que a autorização seja autorizada me desautorizando.", "Quando estiver triste, abrace um sapato, com sola!", "A Terra é plana, por isso é chamada de planeta. Se a Terra fosse redonda, seria chamada de Skol.", "Compre várias coisas com seus coins em <#404466159778398220>.", "Fui brincar de ser feio e nunca mas parei!", "Se eu estiver louco... FUI DROGADO MESMO.","O maior trauma é quando se conhece alguém que não era alguém, era algumas coisa!", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Se eu fumar maconha em uma folha de um livro de historia, vai ser baseado em histórias reais?"]
+    var falas = ["Caso queira receber notificações de atualizações, novidades etc... vá em <#402608271153823754> !", "Lembre-se de respeitar as regras para melhor convivencia!", "Você pode mudar a cor do seu nome em <#403664026703233024>.", "É tanta gente que eu stalkeio que daqui a pouco o CSI me contrata.", "O amor é como um peido. Ninguém vê, mas quando a gente sente que está vindo fica com medo porque sabe que vai dar merda.", "Se bebe, não mude a senha do celular!", "Terminar o ensino médio é saber que você não está de férias e sim desempregado.", "A que ponto chegamos, disse o motorista do Uber.", "Ninguém te escuta, agora solta um peido pra ver!", "Você já ficou com muita gente feia, o que custa eu ser mais um?", "Poderia existir algum tutorial de conversa após o 'Humm...'", "Quando algo está errado, quer dizer que não está certo. O importante é o que importa.", "Só vim aqui dizer uma coisa: uma coisa.", "Estudos comprovam que os alunos que foram reprovados repetiram de ano.", "Antes de ser diagnosticado com depressão ou baixa autoestima, certifique-se de que não está rodeado por idiotas.", "Só vim avisar que não haverá sol esta noite.", "Muitas vezes a gente pensa que não pensa, mas a gente pensa, porque se a gente não pensasse, a gente não iria pensar que não pensa porque a gente não iria nem pensar.", "A mulher me ligou oferecendo ovo de colher, eu nem sabia que colher botava ovo.", "Divulgado resultado de uma pesquisa muito interessante. Concluíram, depois de anos de estudo que, quem festeja muitos aniversários, vive mais.", "Queria ser feio, e sou mesmo.", "O símbolo & não parece um carinha arrastando a bundinha no chão? Tá, parei...", "Ser jogar Asepxia na água o peixe vem sem espinha?", "Bom dia pra todo mundo, menos pra alguns.", "Não existe sacrifício sem sacrifício.", "Comunista é quem mora em comunidade né?", "Eu pensei tanto, que quando eu já tinha pensado não foi aquilo que eu estava pensando, por isso parei de pensar.", "Poucas coisas conseguem acabar com meu dia. Uma delas é a noite!", "Fiz uma limpa no meu Facebook, só deixei quem eu não removi.", "Hoje é o ontem de amanhã. E é o amanhã de ontem. E foi depois de amanhã, há dois dias atrás, será outo dia, da semana passada!", "Não autorizo que a autorização seja autorizada me desautorizando.", "Quando estiver triste, abrace um sapato, com sola!", "A Terra é plana, por isso é chamada de planeta. Se a Terra fosse redonda, seria chamada de Skol.", "Compre várias coisas com seus coins em <#404466159778398220>.", "Fui brincar de ser feio e nunca mas parei!", "Se eu estiver louco... FUI DROGADO MESMO.","O maior trauma é quando se conhece alguém que não era alguém, era algumas coisa!", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Se eu fumar maconha em uma folha de um livro de historia, vai ser baseado em histórias reais?", ":smirk:", "Professor é um ser humano que merece toda admiração possível, porque passar a vida lidando com adolescente idiota tem que amar muito a profissão mesmo.", "Será que na Suíça eles chamam o queijo Suíço queijo daqui mesmo?", "Ouvi dizer que o dizer é um discurso que diz dizendo.", "Não quer mais, então não fique traindo. Segurando alguém só pra provar que tem uma idiota que te aceita, e te quer. Porque você vai acabar sozinho e sem ninguém pelo fato de não saber valorizar, e reconhecer alguém que realmente quer cuidar de você.", "Tem gente por aí que é igual cobra. Só te passa a perna. Não, espera. Algo de errado, não está certo.", "É na profundidade do profundo que está a profundeza.", "Não entendo porque a manga da minha camisa não quer amadurecer.", "Se você vencer uma discussão na internet continuará um idiota, assim como o que perdeu."]
 
 
     console.log(`Conectado !`)
@@ -891,85 +891,6 @@ client.on("message", message => {
     });
 });
 
-client.on("message", message => {
-    var f1 = new Set()
-    var f2 = new Set()
-    var f3 = new Set()
-    var f4 = new Set()
-    var f5 = new Set()
-    var f6 = new Set()
-
-        if (f1.has(message.author.id)) {
-    
-            if (f2.has(message.author.id)) {
-            
-                if (f3.has(message.author.id)) {
-            
-                    if (f4.has(message.author.id)) {
-            
-                        if (f5.has(message.author.id)) {
-            
-                            if (f6.has(message.author.id)) {
-            
-                                if (!message.guild.member(message.author.id).kickable) return message.reply("**Sorte que não tenho permissão para te kickar. :rage:**")
-                                client.guilds.get(message.guild.id).members.get(message.author.id).ban()
-                                message.reply("**Kickado por flood. :confused:**");
-
-                            } else {
-                    
-                                f6.add(message.author.id)
-                                setTimeout(function() {
-                                    f6.delete(message.author.id)
-                                }, 2150)
-                    
-                            }
-
-                        } else {
-                
-                            f5.add(message.author.id)
-                            setTimeout(function() {
-                                f5.delete(message.author.id)
-                            }, 2150)
-                
-                        }
-
-                    } else {
-            
-                        f4.add(message.author.id)
-                        setTimeout(function() {
-                            f4.delete(message.author.id)
-                        }, 2150)
-            
-                    }
-
-                } else {
-        
-                    f3.add(message.author.id)
-                    setTimeout(function() {
-                        f3.delete(message.author.id)
-                    }, 2150)
-        
-                }
-
-            } else {
-    
-                f2.add(message.author.id)
-                setTimeout(function() {
-                    f2.delete(message.author.id)
-                }, 2150)
-    
-            }            
-
-        } else {
-
-            f1.add(message.author.id)
-            setTimeout(function() {
-                f1.delete(message.author.id)
-            }, 2150)
-
-        }
-
-})
 
 async function getEval(message, args) {
     if (message.content.includes("token")) return message.reply("**Ta doidão?**");
