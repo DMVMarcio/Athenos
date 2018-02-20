@@ -58,7 +58,7 @@ exports.run = (client, message, args) => {
                             dcloteria.numero = sortNUMERO
                             dcloteria.ganhador = "Ninguem"
                             dcloteria.save();
-                            message.guild.channels.get("410084948930854912").sendMessage("<@&399759520089374720> :arrow_down: :arrow_down: <@&399759520089374720>")
+                            message.guild.channels.get("410084948930854912").sendMessage("<@&415631126049062943> :arrow_down: :arrow_down: <@&415631126049062943>")
                             message.guild.channels.get("410084948930854912").sendMessage({
                                 "embed": {
                                     "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Loteria iniciada, participe usando:**\n`a!loteria part <numero de 0 a 100>`\nㅤ\n**PS:** A loteria dura apenas 3 horas.",
@@ -236,6 +236,18 @@ exports.run = (client, message, args) => {
                     }
                 }
 
+                if(message.content.startsWith("a!loteria notify")) {
+
+                    if (!message.guild.members.get(message.author.id).roles.find("name", '🔔 LOTERIA 🔔')) {
+                        message.reply("**Notificações de loteria ativadas! 🔔**");
+                        message.guild.members.get(message.author.id).addRole("415631126049062943");
+                    } else {
+                        message.reply("**Notificações de loteria desativadas! 🔕**");
+                        message.guild.members.get(message.author.id).removeRole("415631126049062943");
+                    }
+
+                }
+
                 if(message.content.startsWith("a!loteria dica")) {
                     if(dcloteria.aberta) {
                     if(dica.has(message.author.id)){
@@ -271,7 +283,7 @@ exports.run = (client, message, args) => {
             } else {
                 message.channel.sendMessage({
                     "embed": {
-                        "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```a!loteria info\na!loteria part\na!loteria criar\na!loteria dica\na!loteria fechar```",
+                        "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ LOTERIA ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```a!loteria info\na!loteria part\na!loteria criar\na!loteria dica\na!loteria fechar\na!loteria notify```",
                         "color": 55512,
                         "thumbnail": {
                             "url": "https://i.imgur.com/4JaNmFp.png"
