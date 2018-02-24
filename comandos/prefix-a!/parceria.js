@@ -47,7 +47,7 @@ if(message.content.startsWith("a!parceria set")) {
                     if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para setar parceria. :confused:**");
 
                     database.Parceiros.findOne({
-                        "_ide": message.mentions.users.first().id
+                        "_usuario": message.mentions.users.first().id
                     }, function (erparceiro, dcparceiro) {
             
                         if(dcparceiro) {
@@ -60,7 +60,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _ide: message.mentions.users.first().id,
+                                _usuario: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -100,7 +100,7 @@ if(message.content.startsWith("a!parceria set")) {
                     if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para setar parceria. :confused:**");
 
                     database.Parceiros.findOne({
-                        "_ide": message.mentions.users.first().id
+                        "_usuario": message.mentions.users.first().id
                     }, function (erparceiro, dcparceiro) {
             
                         if(dcparceiro) {
@@ -113,7 +113,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _ide: message.mentions.users.first().id,
+                                _usuario: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -153,7 +153,7 @@ if(message.content.startsWith("a!parceria set")) {
                     if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para setar parceria. :confused:**");
 
                     database.Parceiros.findOne({
-                        "_ide": message.mentions.users.first().id
+                        "_usuario": message.mentions.users.first().id
                     }, function (erparceiro, dcparceiro) {
             
                         if(dcparceiro) {
@@ -166,7 +166,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _ide: message.mentions.users.first().id,
+                                _usuario: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -206,7 +206,7 @@ if(message.content.startsWith("a!parceria set")) {
                     if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para setar parceria. :confused:**");
 
                     database.Parceiros.findOne({
-                        "_ide": message.mentions.users.first().id
+                        "_usuario": message.mentions.users.first().id
                     }, function (erparceiro, dcparceiro) {
             
                         if(dcparceiro) {
@@ -219,7 +219,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _ide: message.mentions.users.first().id,
+                                _usuario: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -259,7 +259,7 @@ if(message.content.startsWith("a!parceria set")) {
                     if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para setar parceria. :confused:**");
 
                     database.Parceiros.findOne({
-                        "_ide": message.mentions.users.first().id
+                        "_usuario": message.mentions.users.first().id
                     }, function (erparceiro, dcparceiro) {
             
                         if(dcparceiro) {
@@ -272,7 +272,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _ide: message.mentions.users.first().id,
+                                _usuario: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -325,7 +325,7 @@ if(message.content.startsWith("a!parceria set")) {
 
         if (message.mentions.users.size < 1) return message.reply("**Mencione algum para parceiro do servidor. :confused:**");
         database.Parceiros.findOne({
-            "_ide": message.mentions.users.first().id
+            "_usuario": message.mentions.users.first().id
         }, function (erparceiro, dcparceiro) {
 
             if(dcparceiro) {
