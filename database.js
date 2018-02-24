@@ -157,12 +157,8 @@ var Loteria = new Schema({
 })
 
 var Parceiro = new Schema({
-    _usuario: {
+    _id: {
         type: String,
-        default: "SIM"
-    },
-    userid: {
-        type: String
     },
     youtubelink: {
         type: String,
