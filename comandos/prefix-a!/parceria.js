@@ -58,6 +58,7 @@ if(message.content.startsWith("a!parceria set")) {
                             message.reply("**Usuário setado como parceiro YouTube**");
 
                         } else {
+                            
                             var parceiro = new database.Users({
                                 _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
@@ -74,7 +75,6 @@ if(message.content.startsWith("a!parceria set")) {
 
                             parceiro.save()
 
-                            message.reply("**Use o comando novamente. :confused:**");
                         }
 
                     })
@@ -111,6 +111,7 @@ if(message.content.startsWith("a!parceria set")) {
                             message.reply("**Usuário setado como parceiro Twitch**");
 
                         } else {
+
                             var parceiro = new database.Users({
                                 _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
@@ -127,7 +128,6 @@ if(message.content.startsWith("a!parceria set")) {
 
                             parceiro.save()
 
-                            message.reply("**Use o comando novamente. :confused:**");
                         }
 
                     })
@@ -164,6 +164,7 @@ if(message.content.startsWith("a!parceria set")) {
                             message.reply("**Usuário setado como parceiro Twitter**");
 
                         } else {
+
                             var parceiro = new database.Users({
                                 _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
@@ -180,7 +181,6 @@ if(message.content.startsWith("a!parceria set")) {
 
                             parceiro.save()
 
-                            message.reply("**Use o comando novamente. :confused:**");
                         }
 
                     })
@@ -217,6 +217,7 @@ if(message.content.startsWith("a!parceria set")) {
                             message.reply("**Usuário setado como parceiro Site**");
 
                         } else {
+
                             var parceiro = new database.Users({
                                 _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
@@ -233,7 +234,6 @@ if(message.content.startsWith("a!parceria set")) {
 
                             parceiro.save()
 
-                            message.reply("**Use o comando novamente. :confused:**");
                         }
 
                     })
@@ -270,6 +270,7 @@ if(message.content.startsWith("a!parceria set")) {
                             message.reply("**Usuário setado como parceiro Discord**");
 
                         } else {
+
                             var parceiro = new database.Users({
                                 _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
@@ -286,7 +287,6 @@ if(message.content.startsWith("a!parceria set")) {
 
                             parceiro.save()
 
-                            message.reply("**Use o comando novamente. :confused:**");
                         }
 
                     })
