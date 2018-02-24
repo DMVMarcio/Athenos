@@ -160,6 +160,9 @@ var Parceiro = new Schema({
     _id: {
         type: String,
     },
+    userid: {
+        type: String,
+    },
     youtubelink: {
         type: String,
         default: "Nenhum"
