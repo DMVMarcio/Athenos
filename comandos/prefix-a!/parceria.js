@@ -252,7 +252,7 @@ if(message.content.startsWith("a!parceria set")) {
 
             }
 
-            if(message.content.startsWith("a!parceria set twitch")) {
+            if(message.content.startsWith("a!parceria set discord")) {
 
                 if(!razaot.length < 1) {
 
