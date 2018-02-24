@@ -60,8 +60,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _usuario: "SIM",
-                                userid: message.mentions.users.first().id,
+                                _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -114,8 +113,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _usuario: "SIM",
-                                userid: message.mentions.users.first().id,
+                                _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -168,8 +166,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _usuario: "SIM",
-                                userid: message.mentions.users.first().id,
+                                _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -222,8 +219,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _usuario: "SIM",
-                                userid: message.mentions.users.first().id,
+                                _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
@@ -276,8 +272,7 @@ if(message.content.startsWith("a!parceria set")) {
                         } else {
 
                             var parceiro = new database.Users({
-                                _usuario: "SIM",
-                                userid: message.mentions.users.first().id,
+                                _id: message.mentions.users.first().id,
                                 youtubelink: "Nenhum",
                                 youtube: false,
                                 twitchlink: "Nenhum",
