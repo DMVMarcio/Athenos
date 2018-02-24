@@ -156,11 +156,59 @@ var Loteria = new Schema({
     }
 })
 
+var Parceiro = new Schema({
+    _id: {
+        type: String
+    },
+    youtubelink: {
+        type: String,
+        default: "Nenhum"
+    },
+    youtube: {
+        type: Boolean,
+        default: false
+    },
+    twitchlink: {
+        type: String,
+        default: "Nenhum"
+    },
+    twitch: {
+        type: Boolean,
+        default: false
+    },
+    twitterlink: {
+        type: String,
+        default: "Nenhum"
+    },
+    twitter: {
+        type: Boolean,
+        default: false
+    },
+    sitelink: {
+        type: String,
+        default: "Nenhum"
+    },
+    site: {
+        type: Boolean,
+        default: false
+    },
+    discordlink: {
+        type: String,
+        default: "Nenhum"
+    },
+    discord: {
+        type: Boolean,
+        default: false
+    }
+})
+
 var Users = mongoose.model("Users", User);
 var Guilds = mongoose.model("Guilds", Guild);
 var Clas = mongoose.model("Clas", Cla);
 var Loterias = mongoose.model("Loterias", Loteria);
+var Parceiros = mongoose.model("Parceiros", Parceiro);
 exports.Users = Users
 exports.Guilds = Guilds
 exports.Clas = Clas
 exports.Loterias = Loterias
+exports.Parceiros = Parceiros
