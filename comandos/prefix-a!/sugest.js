@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
 
     if(!razaou.length < 1) {
 
-        if(coldown.has(message.author.id)) {
+        if(!coldown.has(message.author.id)) {
 
         message.guild.channels.get("418128504618614815").sendMessage({
             "embed": {
