@@ -24,6 +24,8 @@ exports.run = (client, message, args) => {
             }, 1000)
         })
 
+        message.reply("**Sugestão enviada. :smile:**");
+
         coldown.add(message.author.id)
         setTimeout(function() {
             coldown.delete(message.author.id)
