@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
                 value.react("❓");
             }, 1500)
             setTimeout(function() {
-                value.react("👎");
+                value.react("❌");
             }, 2000)
         })
 
