@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
 
     if(!razaou.length < 1) {
 
-        if(!coldown.has(message.author.id)) {
+        if(coldown.has(message.author.id)) return message.reply("**Você deve esperar 3 minutos pra dar outra sugestão. :confused:**");;
 
         message.guild.channels.get("418128504618614815").sendMessage({
             "embed": {
@@ -22,6 +22,12 @@ exports.run = (client, message, args) => {
             setTimeout(function() {
                 value.react("👎");
             }, 1000)
+            setTimeout(function() {
+                value.react("❓");
+            }, 1500)
+            setTimeout(function() {
+                value.react("👎");
+            }, 2000)
         })
 
         message.reply("**Sugestão enviada. :smile:**");
@@ -30,10 +36,6 @@ exports.run = (client, message, args) => {
         setTimeout(function() {
             coldown.delete(message.author.id)
         }, 3 * 1000 * 60)
-
-    } else {
-        message.reply("**Você deve esperar 3 minutos pra dar outra sugestão. :confused:**");
-    }
 
     } else {
         message.reply("**Diga sua sugestão**");
