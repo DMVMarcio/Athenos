@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
 
                     if (doc2) {
 
-                        if(doc2.coins + 25000) {
+                        if(doc2.coins > 25000) {
 
                         if (Math.round(Math.random() * 1) == 1) {
 
