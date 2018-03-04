@@ -233,7 +233,7 @@ client.on("message", (message) => {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("419992174193803282").id) {
             setTimeout(function() {
                 message.delete();
-            }, 5000)
+            }, 60 * 1000)
         }
     }
 
