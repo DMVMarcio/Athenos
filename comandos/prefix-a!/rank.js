@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
                 var unbug2 = 350 * documando.level + 1
                 var toplevel = "\n" + position.slice(0, 10).map((a, posicao) => "**[" + (posicao + 1) + "]** " +
 
-                    client.users.get(a.id).username + " - :star2: **Level:** " + a.level + "      :star: **Exp:** " + a.xp + "/" + unbug).join("\nㅤ\n") + "";
+                    client.users.get(a.id).username + " - **Level:** " + a.level + ", **Exp:** " + a.xp + "/" + unbug).join("\nㅤ\n") + "";
                 message.channel.sendMessage({
                     "embed": {
                         "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ RANK ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n" + toplevel,
