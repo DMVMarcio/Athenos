@@ -19,16 +19,16 @@ exports.run = (client, message, args) => {
                 position = position.filter(function(a) {
                     return client.users.get(a.id)
                 })
-                var toplevel = "\n" + position.slice(0, 10).map((a, posicao) => "**[" + (posicao + 1) + "]** " +
+                var toplevel = "\n" + position.slice(0, 10).map((a, posicao) => "**" + (posicao + 1) + "** " +
 
-                    client.users.get(a.id).username + " - **Level:** " + a.level + ", **Exp:** " + a.xp + "/" + 350 * a.level + 1).join("\nㅤ\n") + "";
+                    client.users.get(a.id).username + " - **Level:** " + a.level + ", **Exp:** " + a.xp + "/" + (350 * a.level + 1)).join("\n") + "";
                 message.channel.sendMessage({
                     "embed": {
                         "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ RANK ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n" + toplevel,
                         "color": 55512,
                         "footer": {
                             "icon_url": message.author.displayAvatarURL,
-                            "text": "Sua pontuação: Level: " + documano.level + ", Exp: " + documano.xp + "/" + 350 * documano.level + 1
+                            "text": "Sua pontuação: Level: " + documano.level + ", Exp: " + documano.xp + "/" + (350 * documano.level + 1)
                         },
                         "thumbnail": {
                             "url": "https://i.imgur.com/4JaNmFp.png"
