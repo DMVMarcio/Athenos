@@ -25,6 +25,7 @@ exports.run = (client, message, args) => {
     var d7 = 15030 - documento.coins
     var d8 = 5001 - documento.coins
     var d9 = 42501 - documento.coins
+    var d10 = 25607 - documento.coins
 
   if (documento) {
 
@@ -282,6 +283,35 @@ if (message.content.startsWith("a!comprar 9")) {
     } else {
 
         message.reply("**Dinheiro insuficiente! :pensive: Você precisa de mais " + d9 + " coins!**");
+
+    }
+
+}
+
+}
+
+if (message.content.startsWith("a!comprar 10")) {
+
+    if(message.guild.members.get(message.author.id).roles.get("419990025342550017")){
+
+        message.reply("**Você já tem o canal NSFW!**");
+
+    } else {
+
+    if(documento.coins > 42500) {
+
+        documento.coins -= 25607
+        documento.save();
+        docs.coins += 25607
+        docs.save();
+        docu.coins += 25607
+        docu.save();
+        message.guild.members.get(message.author.id).addRole("419990025342550017");
+        message.reply("**Compra feita com sucesso! :money_mouth:**");
+
+    } else {
+
+        message.reply("**Dinheiro insuficiente! :pensive: Você precisa de mais " + d10 + " coins!**");
 
     }
 
