@@ -26,6 +26,8 @@ exports.run = (client, message, args) => {
 
                     if (doc2) {
 
+                        if(doc2.coins + 25000) {
+
                         if (Math.round(Math.random() * 1) == 1) {
 
                             documento.coins += dayRDM
@@ -47,6 +49,10 @@ exports.run = (client, message, args) => {
                                 dayCol.delete(message.author.id)
                             }, 6 * 1000 * 60 * 60)
                         }
+
+                    } else {
+                        message.reply("**Este usuário é muito pobre para ser roubado. :confused:**");
+                    }
 
                     } else {
 
