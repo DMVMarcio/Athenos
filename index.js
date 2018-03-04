@@ -933,12 +933,3 @@ client.on('message', message => {
         }
     }
 });
-
-client.on("ready", () => {
-
-    var falas = ["!servidores", "!whitelist", "!denunciar", "!cache"]
-    
-        setInterval(() => {
-            client.guilds.get("403610734757675008").channels.get("417047007904137231").sendMessage("**" + falas[Math.round(Math.random() * falas.length - 1)] + "**") 
-        }, 1 * 60 * 1000)
-    })
