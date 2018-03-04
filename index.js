@@ -177,6 +177,7 @@ client.on("ready", () => {
         client.user.setGame(`Athenos - ${client.users.size - 1} membros`, "https://www.twitch.tv/zmarciogod")
         client.user.setStatus(statusIDO[Math.round(Math.random() * statusIDO.length - 1)]);
     }, 1 * 60 * 1000)
+    
 });
 
 client.login(process.env.token)
@@ -222,6 +223,14 @@ client.on("message", (message) => {
 
     if (message.content.startsWith("")) {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402608271153823754").id) {
+            setTimeout(function() {
+                message.delete();
+            }, 5000)
+        }
+    }
+
+    if (message.content.startsWith("")) {
+        if (message.channel.id == client.guilds.get("399756948951662592").channels.get("419992174193803282").id) {
             setTimeout(function() {
                 message.delete();
             }, 5000)
@@ -924,3 +933,12 @@ client.on('message', message => {
         }
     }
 });
+
+client.on("ready", () => {
+
+    var falas = ["!servidores", "!whitelist", "!denunciar", "!cache"]
+    
+        setInterval(() => {
+            client.guilds.get("403610734757675008").channels.get("417047007904137231").sendMessage("**" + falas[Math.round(Math.random() * falas.length - 1)] + "**") 
+        }, 1 * 60 * 1000)
+    })
