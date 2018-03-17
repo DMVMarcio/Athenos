@@ -18,8 +18,6 @@ exports.run = (client, message, args) => {
 
                 if (!razaod.length < 1) {
 
-                    if(!razaod.length > 3){
-
                         if(documento.invitecode == "Nenhum"){
 
                             database.Convites.findOne({
@@ -50,12 +48,8 @@ exports.run = (client, message, args) => {
                             message.reply("**Você já possui um icode**");
                         }
 
-                    } else {
-                        message.reply("**De 1 à 3 digitos. :confused:**");
-                    }
-
                 } else {
-                    message.reply("**Diga o código de convite ( 1 à 3 digitos ) que deseja.**");
+                    message.reply("**Diga o código de convite que deseja.**");
                 }
 
             }
@@ -89,7 +83,7 @@ exports.run = (client, message, args) => {
         } else {
             message.channel.sendMessage({
                 "embed": {
-                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/9WUTx4A\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo de 1 à 3 digitos que deseja>\na!icode usar <codigo de quem lhe convidou>```",
+                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/9WUTx4A\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo que deseja>\na!icode usar <codigo de quem lhe convidou>```",
                   "color": 55512,
                   "thumbnail": {
                     "url": "https://i.imgur.com/4JaNmFp.png"
