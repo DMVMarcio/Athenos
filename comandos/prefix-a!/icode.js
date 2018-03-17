@@ -67,6 +67,23 @@ exports.run = (client, message, args) => {
                         docode.usos += 1
                         docode.save()
                         documento.invitetru = true
+                        documento.save();
+                        database.Users.findOne({
+                            "_id": docode.criador
+                        }, function(errinho, convidador) {
+
+                            if(convidador){
+
+                                convidador.coins += 10000
+                                convidador.save()
+                                message.channel.sendMessage(`**<@${convidador._id}> ganhou 10000 coins por convidar ${message.author}.**`);
+                                message.reply("**Código de convite usado.**");
+
+                            } else {
+                                message.reply("**Ocorreu um erro**");
+                            }
+
+                        })
 
                     } else {
                         message.reply("**Você já usou um convite, ou já criou um. :cofused:**");
