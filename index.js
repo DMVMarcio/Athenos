@@ -995,7 +995,7 @@ client.on("message", message => {
             }
         } else {
             documento.msglevel = 0
-            documento.menagens = 0
+            documento.mensagens = 0
             documento.save()
         }
 
