@@ -45,7 +45,17 @@ exports.run = (client, message, args) => {
               "name": ":moneybag: Money",
               "value": `${documento.coins}`,
               "inline": true
-            }
+            },
+            {
+              "name": ":incoming_envelope: ICODE",
+              "value": `${documento.invitecode}`,
+              "inline": true
+            },
+            {
+              "name": ":mailbox_with_mail: Invitou",
+              "value": `${documento.invitou} users`,
+              "inline": true
+            },
           ]
         }
       });
@@ -82,41 +92,51 @@ exports.run = (client, message, args) => {
 
         var unbug = 350 * documento.level + 1
 
-        message.reply({
-            "embed": {
-              "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.mentions.users.first().username}:**\nㅤ`,
-              "color": 55512,
-              "thumbnail": {
-                "url": message.mentions.users.first().displayAvatarURL
-              },
-              "author": {
-                "name": message.mentions.users.first().username,
-                "icon_url": message.mentions.users.first().displayAvatarURL
-              },
-              "fields": [
-                {
-                  "name": ":gem: Level",
-                  "value": `${documento.level}`,
-                  "inline": true
-                },
-                {
-                  "name": ":star2: XP",
-                  "value": `${documento.xp}/${unbug}`,
-                  "inline": true
-                },
-                {
-                  "name": ":briefcase: Rep",
-                  "value": `${documento.rep}`,
-                  "inline": true
-                },
-                {
-                  "name": ":moneybag: Money",
-                  "value": `${documento.coins}`,
-                  "inline": true
-                }
-              ]
-            }
-          });
+    message.reply({
+        "embed": {
+          "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.author.username}:**\nㅤ`,
+          "color": 55512,
+          "thumbnail": {
+            "url": message.author.displayAvatarURL
+          },
+          "author": {
+            "name": message.author.username,
+            "icon_url": message.author.displayAvatarURL
+          },
+          "fields": [
+            {
+              "name": ":gem: Level",
+              "value": `${documento.level}`,
+              "inline": true
+            },
+            {
+              "name": ":star2: XP",
+              "value": `${documento.xp}/${unbug}`,
+              "inline": true
+            },
+            {
+              "name": ":briefcase: Rep",
+              "value": `${documento.rep}`,
+              "inline": true
+            },
+            {
+              "name": ":moneybag: Money",
+              "value": `${documento.coins}`,
+              "inline": true
+            },
+            {
+              "name": ":incoming_envelope: ICODE",
+              "value": `${documento.invitecode}`,
+              "inline": true
+            },
+            {
+              "name": ":mailbox_with_mail: Invitou",
+              "value": `${documento.invitou} users`,
+              "inline": true
+            },
+          ]
+        }
+      });
 
       } else {
 
