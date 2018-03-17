@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
                                         usos: 0
                                     })
                             
-                                    icode.save()
+                                    pessoa.save()
                                
                                     documento.invitecode = message.content.replace("a!icode create ", "")
                                     documento.save();
@@ -62,7 +62,7 @@ exports.run = (client, message, args) => {
                     "_codigo": message.content.replace("a!icode usar ", "")
                 }, function(ercode, docode) {
 
-                    if(documento.invitetru == false){
+                    if(!documento.invitetru){
 
                         docode.usos += 1
                         docode.save()
