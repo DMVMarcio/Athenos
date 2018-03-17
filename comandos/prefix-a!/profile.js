@@ -43,7 +43,7 @@ exports.run = (client, message, args) => {
             },
             {
               "name": ":moneybag: Money",
-              "value": `${documeto.coins}`,
+              "value": `${documento.coins}`,
               "inline": true
             }
           ]
