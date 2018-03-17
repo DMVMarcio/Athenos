@@ -37,6 +37,7 @@ exports.run = (client, message, args) => {
                                     pessoa.save()
                                
                                     documento.invitecode = message.content.replace("a!icode create ", "")
+                                    documento.invitetru = true
                                     documento.save();
                                     message.reply("**icode criado com sucesso. :smile:**");
 
@@ -75,6 +76,7 @@ exports.run = (client, message, args) => {
                             if(convidador){
 
                                 convidador.coins += 10000
+                                convidador.invitou += 1
                                 convidador.save()
                                 message.channel.sendMessage(`**<@${convidador._id}> ganhou 10000 coins por convidar ${message.author}.**`);
                                 message.reply("**Código de convite usado.**");
