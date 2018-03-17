@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
 
                     if (doc2) {
 
-                        doc2.rep -= dayRDM
+                        doc2.rep += 1
                         doc2.save();
                         message.reply(`Você deu um ponto de reputação para ${message.mentions.users.first().username}`);
                         dayCol.add(message.author.id)
