@@ -15,29 +15,40 @@ exports.run = (client, message, args) => {
     var unbug = 350 * documento.level + 1
 
     message.reply({
-      "embed": {
-        "color": 55512,
-        "thumbnail": {
-          "url": message.author.displayAvatarURL
-        },
-        "author": {
-          "name": message.author.username,
-          "icon_url": message.author.displayAvatarURL
-        },
-        "fields": [
-          {
-            "name": "💎Level",
-            "value": documento.level,
-            "inline": true
+        "embed": {
+          "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.author.username}:**\nㅤ`,
+          "color": 55512,
+          "thumbnail": {
+            "url": message.author.displayAvatarURL
           },
-          {
-            "name": "🌟XP",
-            "value": documento.xp + "/" + unbug,
-            "inline": true
-          }
-        ]
-      }
-    });
+          "author": {
+            "name": message.author.username,
+            "icon_url": message.author.displayAvatarURL
+          },
+          "fields": [
+            {
+              "name": ":gem: Level",
+              "value": `${documento.level}`,
+              "inline": true
+            },
+            {
+              "name": ":star2: XP",
+              "value": `${documento.xp}/${unbug}`,
+              "inline": true
+            },
+            {
+              "name": ":briefcase: Rep",
+              "value": `${documento.rep}`,
+              "inline": true
+            },
+            {
+              "name": ":moneybag: Money",
+              "value": `${documeto.coins}`,
+              "inline": true
+            }
+          ]
+        }
+      });
 
   } else {
   
@@ -71,8 +82,9 @@ exports.run = (client, message, args) => {
 
         var unbug = 350 * documento.level + 1
 
-          message.reply({
+        message.reply({
             "embed": {
+              "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.mentions.users.first().username}:**\nㅤ`,
               "color": 55512,
               "thumbnail": {
                 "url": message.mentions.users.first().displayAvatarURL
@@ -83,13 +95,23 @@ exports.run = (client, message, args) => {
               },
               "fields": [
                 {
-                  "name": "💎Level",
-                  "value": documento.level,
+                  "name": ":gem: Level",
+                  "value": `${documento.level}`,
                   "inline": true
                 },
                 {
-                  "name": "🌟XP",
-                  "value": documento.xp + "/" + unbug,
+                  "name": ":star2: XP",
+                  "value": `${documento.xp}/${unbug}`,
+                  "inline": true
+                },
+                {
+                  "name": ":briefcase: Rep",
+                  "value": `${documento.rep}`,
+                  "inline": true
+                },
+                {
+                  "name": ":moneybag: Money",
+                  "value": `${documeto.coins}`,
                   "inline": true
                 }
               ]

@@ -323,11 +323,19 @@ if (message.content.startsWith("a!comprar 10")) {
   
 
     var pessoa = new database.Users({
-      _id: message.author.id,
-      level: 0,
-      xp: 0,
-      coins: 0
-  })
+        _id: message.author.id,
+        level: 0,
+        xp: 0,
+        coins: 0,
+        conquistas: 0,
+        mensagens: 0,
+        msglevel: 0,
+        invitetru: false,
+        invitecode: "Nenhum",
+        invitou: 0,
+        warn: 0,
+        rep: 0
+    })
 
   pessoa.save()
 

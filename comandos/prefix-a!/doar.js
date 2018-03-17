@@ -33,10 +33,18 @@ exports.run = (client, message, args) => {
                         } else {
 
                             var pessoa = new database.Users({
-                                _id: message.mentions.users.first().id,
+                                _id: message.author.id,
                                 level: 0,
                                 xp: 0,
-                                coins: 0
+                                coins: 0,
+                                conquistas: 0,
+                                mensagens: 0,
+                                msglevel: 0,
+                                invitetru: false,
+                                invitecode: "Nenhum",
+                                invitou: 0,
+                                warn: 0,
+                                rep: 0
                             })
 
                             pessoa.save()
@@ -62,7 +70,15 @@ exports.run = (client, message, args) => {
                 _id: message.author.id,
                 level: 0,
                 xp: 0,
-                coins: 0
+                coins: 0,
+                conquistas: 0,
+                mensagens: 0,
+                msglevel: 0,
+                invitetru: false,
+                invitecode: "Nenhum",
+                invitou: 0,
+                warn: 0,
+                rep: 0
             })
             pessoa.save()
         }

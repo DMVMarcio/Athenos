@@ -22,6 +22,51 @@ var User = new Schema({
     coins: {
         type: Number,
         default: 0
+    },
+    conquistas: {
+        type: Number,
+        default: 0
+    },
+    mensagens: {
+        type: Number,
+        default: 0
+    },
+    msglevel: {
+        type: Number,
+        default: 0
+    },
+    invitetru: {
+        type: Boolean,
+        default: false
+    },
+    invitecode: {
+        type: String,
+        default: "Nenhum"
+    },
+    invitou: {
+        type: Number,
+        default: 0
+    },
+    warn: {
+        type: Number,
+        default: 0
+    },
+    rep: {
+        type: Number,
+        default: 0
+    }
+})
+
+var Convite = new Schema({
+    _codigo: {
+        type: String
+    },
+    criador: {
+        type: String
+    },
+    usos: {
+        type: Number,
+        default: 0
     }
 })
 
@@ -65,6 +110,18 @@ var Cla = new Schema({
     },
     dono: {
         type: String
+    },
+    trofeus: {
+        type: Number,
+        default: 0
+    },
+    vitorias: {
+        type: Number,
+        default: 0
+    },
+    derrotas: {
+        type: Number,
+        default: 0
     },
     public: {
         type: Boolean,
@@ -206,11 +263,13 @@ var Parceiro = new Schema({
 })
 
 var Users = mongoose.model("Users", User);
+var Convites = mongoose.model("Convites", Convite);
 var Guilds = mongoose.model("Guilds", Guild);
 var Clas = mongoose.model("Clas", Cla);
 var Loterias = mongoose.model("Loterias", Loteria);
 var Parceiros = mongoose.model("Parceiros", Parceiro);
 exports.Users = Users
+exports.Convites = Convites
 exports.Guilds = Guilds
 exports.Clas = Clas
 exports.Loterias = Loterias

@@ -1,18 +1,17 @@
 var database = require("../../database.js")
 var dayCol = new Set()
-let dayRDM = Math.round(Math.random() * 2500)
 
 exports.run = (client, message, args) => {
 
     let user = message.mentions.users.first();
 
-    if (dayCol.has(message.author.id)) return message.reply("**Você já roubou hoje. :confused:**");
+    if (dayCol.has(message.author.id)) return message.reply("**Você já deu rep hoje. :confused:**");
 
     if (message.mentions.users.size < 1) {
-        message.reply("**Mecione alguem para roubar. :confused:**");
+        message.reply("**Você já pode dar rep. :smile:**");
     } else {
-        if (message.mentions.users.first().id == message.author.id) return message.reply("**Você não pode roubar você mesmo!**");
-        if (message.mentions.users.first().bot) return message.reply("**Você não pode roubar um bot!**");
+        if (message.mentions.users.first().id == message.author.id) return message.reply("**Você não pode dar rep para você mesmo!**");
+        if (message.mentions.users.first().bot) return message.reply("**Você não pode dar rep para um bot!**");
 
         database.Users.findOne({
             "_id": message.author.id
@@ -26,33 +25,13 @@ exports.run = (client, message, args) => {
 
                     if (doc2) {
 
-                        if(doc2.coins > 25000) {
-
-                        if (Math.round(Math.random() * 1) == 1) {
-
-                            documento.coins += dayRDM
-                            documento.save();
-                            doc2.coins -= dayRDM
-                            doc2.save();
-                            message.reply("**Você teve sucesso ao roubar " + dayRDM + " coins de <@" + message.mentions.users.first().id + ">.**");
-                            dayCol.add(message.author.id)
-                            setTimeout(function() {
-                                dayCol.delete(message.author.id)
-                            }, 6 * 1000 * 60 * 60)
-
-                        } else {
-                            documento.coins -= dayRDM
-                            documento.save();
-                            message.reply("**Você foi pego ao tentar roubar e perdeu " + dayRDM + " coins! :oncoming_police_car:**");
-                            dayCol.add(message.author.id)
-                            setTimeout(function() {
-                                dayCol.delete(message.author.id)
-                            }, 6 * 1000 * 60 * 60)
-                        }
-
-                    } else {
-                        message.reply("**Este usuário é muito pobre para ser roubado. :confused:**");
-                    }
+                        doc2.rep -= dayRDM
+                        doc2.save();
+                        message.reply(`Você deu um ponto de reputação para ${message.mentions.users.first().username}`);
+                        dayCol.add(message.author.id)
+                        setTimeout(function() {
+                            dayCol.delete(message.author.id)
+                        }, 6 * 1000 * 60 * 60)
 
                     } else {
 
