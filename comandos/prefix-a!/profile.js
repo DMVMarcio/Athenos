@@ -94,14 +94,14 @@ exports.run = (client, message, args) => {
 
     message.reply({
         "embed": {
-          "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.author.username}:**\nㅤ`,
+          "description": `ㅤ\n:bust_in_silhouette: **Perfil de ${message.mentions.users.first().username}:**\nㅤ`,
           "color": 55512,
           "thumbnail": {
-            "url": message.author.displayAvatarURL
+            "url": message.mentions.users.first().displayAvatarURL
           },
           "author": {
-            "name": message.author.username,
-            "icon_url": message.author.displayAvatarURL
+            "name": message.mentions.users.first().username,
+            "icon_url": message.mentions.users.first().displayAvatarURL
           },
           "fields": [
             {
