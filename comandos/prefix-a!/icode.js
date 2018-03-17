@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
                                         usos: 0
                                     })
                             
-                                    pessoa.save()
+                                    icode.save()
                                
                                     documento.invitecode = message.content.replace("a!icode create ", "")
                                     documento.save();
