@@ -5,6 +5,7 @@ exports.run = (client, message, args) => {
     let razaou = args.slice(0).join(' ');
     let razaod = args.slice(1).join(' ');
     let razaot = args.slice(2).join(' ');
+    var coldown = new Set()
     var porcentagem = Math.round(Math.random() * 100)
 
     database.Users.findOne({
@@ -17,6 +18,8 @@ exports.run = (client, message, args) => {
             if (!razaou.length < 1) {
                 
                 if (!razaod.length < 1) {
+
+                    if (coldown.has(message.author.id)) return message.reply("**Aguarde um momento...**");
 
                     if (message.content.startsWith("a!apostar 2x")) {
 
@@ -31,12 +34,20 @@ exports.run = (client, message, args) => {
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
                                     message.reply("**Você perdeu a aposta. :confused:**");
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 } else {
 
                                     documento.coins += parseInt(args[1]) * 2
                                     documento.save();
                                     message.reply(`**Você ganhou a aposta, e ganhou ${(parseInt(args[1]) * 2)} coins**`);
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 }
 
@@ -67,12 +78,20 @@ exports.run = (client, message, args) => {
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
                                     message.reply("**Você perdeu a aposta. :confused:**");
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 } else {
 
                                     documento.coins += parseInt(args[1]) * 3
                                     documento.save();
                                     message.reply(`**Você ganhou a aposta, e ganhou ${(parseInt(args[1]) * 3)} coins**`);
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 }
 
@@ -103,12 +122,20 @@ exports.run = (client, message, args) => {
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
                                     message.reply("**Você perdeu a aposta. :confused:**");
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 } else {
 
                                     documento.coins += parseInt(args[1]) * 4
                                     documento.save();
                                     message.reply(`**Você ganhou a aposta, e ganhou ${(parseInt(args[1]) * 4)} coins**`);
+                                    coldown.add(message.author.id)
+                                    setTimeout(function() {
+                                        coldown.delete(message.author.id)
+                                    }, 15 * 1000)
 
                                 }
 
