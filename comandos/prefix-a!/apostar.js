@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
 
                             if (args[1] < documento.coins) {
 
-                                if(porcentagem < 50){
+                                if(porcentagem < 70){
 
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
@@ -62,7 +62,7 @@ exports.run = (client, message, args) => {
 
                             if (args[1] < documento.coins) {
 
-                                if(porcentagem < 50){
+                                if(porcentagem < 80){
 
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
@@ -98,7 +98,7 @@ exports.run = (client, message, args) => {
 
                             if (args[1] < documento.coins) {
 
-                                if(porcentagem < 50){
+                                if(porcentagem < 90){
 
                                     documento.coins -= parseInt(args[1])
                                     documento.save();
