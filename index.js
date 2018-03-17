@@ -242,6 +242,14 @@ client.on("message", (message) => {
     }
 
     if (message.content.startsWith("")) {
+        if (message.channel.id == client.guilds.get("399756948951662592").channels.get("424679815568687104").id) {
+            setTimeout(function() {
+                message.delete();
+            }, 13 * 1000)
+        }
+    }
+
+    if (message.content.startsWith("")) {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("403664026703233024").id) {
             setTimeout(function() {
                 message.delete();
