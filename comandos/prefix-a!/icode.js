@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
                             }
                         });
                         position = position.sort(function(a, b) {
-                            return b.points - a.points
+                            return b.usos - a.usos
                         });
                         var topcodes = "\n" + position.slice(0, 10).map((a, posicao) => "**" + (posicao + 1) + "** " + a._codigo + " - **" + a.usos + " usos.**").join("\n") + "";
                         message.channel.sendMessage({
