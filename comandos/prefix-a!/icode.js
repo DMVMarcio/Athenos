@@ -22,6 +22,9 @@ exports.run = (client, message, args) => {
                     database.Convites.deleteOne({
                         "criador": message.author.id
                     }, function(ercodek, docodek) {})
+                    documento.invitecode = "Nenhum"
+                    documento.invitou = 0
+                    documento.save();
                     message.reply("**icode deletado.**");
                 }
 
