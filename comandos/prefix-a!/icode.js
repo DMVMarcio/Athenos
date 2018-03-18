@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
                     message.reply("**Você não possui um icode. :confused:**");
                 } else {
                     database.Convites.deleteOne({
-                        "criador": member.id
+                        "criador": message.author.id
                     }, function(ercodek, docodek) {})
                     message.reply("**icode deletado.**");
                 }
