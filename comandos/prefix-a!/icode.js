@@ -14,6 +14,47 @@ exports.run = (client, message, args) => {
 
         if (!razaou.length < 1) {
 
+            if (message.content.startsWith("a!icode delete")) {
+
+                if(documento.invitecode == "Nenhum") {
+                    message.reply("**Você não possui um icode. :confused:**");
+                } else {
+                    database.Convites.deleteOne({
+                        "criador": member.id
+                    }, function(ercodek, docodek) {})
+                    message.reply("**icode deletado.**");
+                }
+
+            }
+
+            if (message.content.startsWith("a!icode top")) {
+
+                database.Convites.find({}, function(erro, documaninho) {
+                    if (documaninho) {
+                        var position = documaninho.map(function(docu) {
+                            return {
+                                _codigo: docu._codigo,
+                                usos: docu.usos
+                            }
+                        });
+                        position = position.sort(function(a, b) {
+                            return b.points - a.points
+                        });
+                        var topcodes = "\n" + position.slice(0, 10).map((a, posicao) => "**" + (posicao + 1) + "** " + a._codigo + " - **" + a.usos + " usos.**").join("\n") + "";
+                        message.channel.sendMessage({
+                            "embed": {
+                                "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ ICODES ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n" + topcodes,
+                                "color": 55512,
+                                "thumbnail": {
+                                    "url": "https://i.imgur.com/4JaNmFp.png"
+                                }
+                            }
+                        })
+                    }
+                });
+
+            }
+
             if (message.content.startsWith("a!icode create")) {
 
                 if (!razaod.length < 1) {
@@ -88,7 +129,7 @@ exports.run = (client, message, args) => {
                         })
 
                     } else {
-                        message.reply("**Você já usou um convite, ou já criou um. :cofused:**");
+                        message.reply("**Você já usou um convite, ou já criou um. :confused:**");
                     }
 
                 })
@@ -102,7 +143,7 @@ exports.run = (client, message, args) => {
         } else {
             message.channel.sendMessage({
                 "embed": {
-                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/9WUTx4A\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo que deseja>\na!icode usar <codigo de quem lhe convidou>```",
+                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/9WUTx4A\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo que deseja>\na!icode delete\na!icode usar <codigo de quem lhe convidou>\na!icode top```",
                   "color": 55512,
                   "thumbnail": {
                     "url": "https://i.imgur.com/4JaNmFp.png"
