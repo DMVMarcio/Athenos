@@ -196,6 +196,7 @@ client.on("ready", () => {
         client.user.setGame(`Athenos - ${client.users.size - 1} membros`, "https://www.twitch.tv/zmarciogod")
         client.user.setStatus(statusIDO[Math.round(Math.random() * statusIDO.length - 1)]);
     }, 1 * 60 * 1000)
+    client.guilds.get("399756948951662592").channels.get("402601119320244236").sendMessage("**:warning: Dynos foram reiniciados.**");
     
 });
 
