@@ -177,7 +177,7 @@ client.on("ready", () => {
 
     const membrosNomes = string
     var statusIDO = ["idle", "dnd", "online", ]
-    var falas = ["Caso queira receber notificações de atualizações, novidades etc... vá em <#402608271153823754> !", "Lembre-se de respeitar as regras para melhor convivencia!", "Você pode mudar a cor do seu nome em <#403664026703233024>.", "É tanta gente que eu stalkeio que daqui a pouco o CSI me contrata.", "O amor é como um peido. Ninguém vê, mas quando a gente sente que está vindo fica com medo porque sabe que vai dar merda.", "Se bebe, não mude a senha do celular!", "Terminar o ensino médio é saber que você não está de férias e sim desempregado.", "A que ponto chegamos, disse o motorista do Uber.", "Ninguém te escuta, agora solta um peido pra ver!", "Você já ficou com muita gente feia, o que custa eu ser mais um?", "Poderia existir algum tutorial de conversa após o 'Humm...'", "Quando algo está errado, quer dizer que não está certo. O importante é o que importa.", "Só vim aqui dizer uma coisa: uma coisa.", "Estudos comprovam que os alunos que foram reprovados repetiram de ano.", "Antes de ser diagnosticado com depressão ou baixa autoestima, certifique-se de que não está rodeado por idiotas.", "Só vim avisar que não haverá sol esta noite.", "Muitas vezes a gente pensa que não pensa, mas a gente pensa, porque se a gente não pensasse, a gente não iria pensar que não pensa porque a gente não iria nem pensar.", "A mulher me ligou oferecendo ovo de colher, eu nem sabia que colher botava ovo.", "Divulgado resultado de uma pesquisa muito interessante. Concluíram, depois de anos de estudo que, quem festeja muitos aniversários, vive mais.", "Queria ser feio, e sou mesmo.", "O símbolo & não parece um carinha arrastando a bundinha no chão? Tá, parei...", "Ser jogar Asepxia na água o peixe vem sem espinha?", "Bom dia pra todo mundo, menos pra alguns.", "Não existe sacrifício sem sacrifício.", "Comunista é quem mora em comunidade né?", "Eu pensei tanto, que quando eu já tinha pensado não foi aquilo que eu estava pensando, por isso parei de pensar.", "Poucas coisas conseguem acabar com meu dia. Uma delas é a noite!", "Fiz uma limpa no meu Facebook, só deixei quem eu não removi.", "Hoje é o ontem de amanhã. E é o amanhã de ontem. E foi depois de amanhã, há dois dias atrás, será outo dia, da semana passada!", "Não autorizo que a autorização seja autorizada me desautorizando.", "Quando estiver triste, abrace um sapato, com sola!", "A Terra é plana, por isso é chamada de planeta. Se a Terra fosse redonda, seria chamada de Skol.", "Compre várias coisas com seus coins em <#404466159778398220>.", "Fui brincar de ser feio e nunca mas parei!", "Se eu estiver louco... FUI DROGADO MESMO.","O maior trauma é quando se conhece alguém que não era alguém, era algumas coisa!", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Se eu fumar maconha em uma folha de um livro de historia, vai ser baseado em histórias reais?", ":smirk:", "Professor é um ser humano que merece toda admiração possível, porque passar a vida lidando com adolescente idiota tem que amar muito a profissão mesmo.", "Será que na Suíça eles chamam o queijo Suíço queijo daqui mesmo?", "Ouvi dizer que o dizer é um discurso que diz dizendo.", "Não quer mais, então não fique traindo. Segurando alguém só pra provar que tem uma idiota que te aceita, e te quer. Porque você vai acabar sozinho e sem ninguém pelo fato de não saber valorizar, e reconhecer alguém que realmente quer cuidar de você.", "Tem gente por aí que é igual cobra. Só te passa a perna. Não, espera. Algo de errado, não está certo.", "É na profundidade do profundo que está a profundeza.", "Não entendo porque a manga da minha camisa não quer amadurecer.", "Se você vencer uma discussão na internet continuará um idiota, assim como o que perdeu.", "Se eu pensar em mim mesmo, pensando no pensamento do que eu estaria fazendo no pensamento, e pensando no outro eu taria pensando?"]
+    var falas = ["Caso queira receber notificações de atualizações, novidades etc... vá em <#402608271153823754> !", "Lembre-se de respeitar as regras para melhor convivencia!", "Você pode mudar a cor do seu nome em <#403664026703233024>.", "É tanta gente que eu stalkeio que daqui a pouco o CSI me contrata.", "O amor é como um peido. Ninguém vê, mas quando a gente sente que está vindo fica com medo porque sabe que vai dar merda.", "Se bebe, não mude a senha do celular!", "Terminar o ensino médio é saber que você não está de férias e sim desempregado.", "A que ponto chegamos, disse o motorista do Uber.", "Ninguém te escuta, agora solta um peido pra ver!", "Você já ficou com muita gente feia, o que custa eu ser mais um?", "Poderia existir algum tutorial de conversa após o 'Humm...'", "Quando algo está errado, quer dizer que não está certo. O importante é o que importa.", "Só vim aqui dizer uma coisa: uma coisa.", "Estudos comprovam que os alunos que foram reprovados repetiram de ano.", "Antes de ser diagnosticado com depressão ou baixa autoestima, certifique-se de que não está rodeado por idiotas.", "Só vim avisar que não haverá sol esta noite.", "Muitas vezes a gente pensa que não pensa, mas a gente pensa, porque se a gente não pensasse, a gente não iria pensar que não pensa porque a gente não iria nem pensar.", "A mulher me ligou oferecendo ovo de colher, eu nem sabia que colher botava ovo.", "Divulgado resultado de uma pesquisa muito interessante. Concluíram, depois de anos de estudo que, quem festeja muitos aniversários, vive mais.", "Queria ser feio, e sou mesmo.", "O símbolo & não parece um carinha arrastando a bundinha no chão? Tá, parei...", "Ser jogar Asepxia na água o peixe vem sem espinha?", "Bom dia pra todo mundo, menos pra alguns.", "Não existe sacrifício sem sacrifício.", "Comunista é quem mora em comunidade né?", "Eu pensei tanto, que quando eu já tinha pensado não foi aquilo que eu estava pensando, por isso parei de pensar.", "Poucas coisas conseguem acabar com meu dia. Uma delas é a noite!", "Fiz uma limpa no meu Facebook, só deixei quem eu não removi.", "Hoje é o ontem de amanhã. E é o amanhã de ontem. E foi depois de amanhã, há dois dias atrás, será outo dia, da semana passada!", "Não autorizo que a autorização seja autorizada me desautorizando.", "Quando estiver triste, abrace um sapato, com sola!", "A Terra é plana, por isso é chamada de planeta. Se a Terra fosse redonda, seria chamada de Skol.", "Compre várias coisas com seus coins em <#404466159778398220>.", "Fui brincar de ser feio e nunca mas parei!", "Se eu estiver louco... FUI DROGADO MESMO.","O maior trauma é quando se conhece alguém que não era alguém, era algumas coisa!", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Como o sol tem bilhões de anos sendo que ele nasceu hoje de manhã?", "Se eu fumar maconha em uma folha de um livro de historia, vai ser baseado em histórias reais?", ":smirk:", "Professor é um ser humano que merece toda admiração possível, porque passar a vida lidando com adolescente idiota tem que amar muito a profissão mesmo.", "Será que na Suíça eles chamam o queijo Suíço queijo daqui mesmo?", "Ouvi dizer que o dizer é um discurso que diz dizendo.", "Não quer mais, então não fique traindo. Segurando alguém só pra provar que tem uma idiota que te aceita, e te quer. Porque você vai acabar sozinho e sem ninguém pelo fato de não saber valorizar, e reconhecer alguém que realmente quer cuidar de você.", "Tem gente por aí que é igual cobra. Só te passa a perna. Não, espera. Algo de errado, não está certo.", "É na profundidade do profundo que está a profundeza.", "Não entendo porque a manga da minha camisa não quer amadurecer.", "Se você vencer uma discussão na internet continuará um idiota, assim como o que perdeu.", "Se eu pensar em mim mesmo, pensando no pensamento do que eu estaria fazendo no pensamento, e pensando no outro eu taria pensando?", "Homem tentou se suicidadar, e acabou morrendo."]
 
     console.log(`Conectado !`)
     setTimeout(function() {
@@ -370,6 +370,117 @@ client.on("message", message => {
                     }
                 }
             }
+        } else {
+            var pessoa = new database.Users({
+                _id: message.author.id,
+                level: 0,
+                xp: 0,
+                coins: 0,
+                conquistas: 0,
+                mensagens: 0,
+                msglevel: 0,
+                invitetru: false,
+                invitecode: "Nenhum",
+                invitou: 0,
+                warn: 0,
+                rep: 0
+            })
+
+            pessoa.save()
+
+        }
+    })
+})
+
+client.on("message", message => {
+
+    database.Users.findOne({
+        "_id": message.author.id
+    }, function(erro, documento) {
+        if (documento) {
+
+            if (documento.level < 20) {
+                if (message.member && message.member.roles.get("406605416009695253")) {
+                    message.guild.members.get(message.author.id).removeRole("406605416009695253");
+                    message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                    message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                    message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                    message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                } else {
+                    if (message.member && message.member.roles.get("406606800205643776")) {
+                        message.guild.members.get(message.author.id).removeRole("406605416009695253");
+                        message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                        message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                        message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                    } else {
+                        if (message.member && message.member.roles.get("408021835280809986")) {
+                            message.guild.members.get(message.author.id).removeRole("406605416009695253");
+                            message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                            message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                            message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                        } else {
+                            if (message.member && message.member.roles.get("408022513529126923")) {
+                                message.guild.members.get(message.author.id).removeRole("406605416009695253");
+                                message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                                message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                                message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            } else {
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (documento.level < 25) {
+                    if (message.member && message.member.roles.get("406606800205643776")) {
+                        message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                        message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                        message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                    } else {
+                        if (message.member && message.member.roles.get("408021835280809986")) {
+                            message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                            message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                            message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                        } else {
+                            if (message.member && message.member.roles.get("408022513529126923")) {
+                                message.guild.members.get(message.author.id).removeRole("406606800205643776");
+                                message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                                message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            } else {
+                            }  
+                        }
+                    }
+                } else {
+                    if(documento.level < 30){
+                        if (message.member && message.member.roles.get("408021835280809986")) {
+                            message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                            message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                        } else {
+                            if (message.member && message.member.roles.get("408022513529126923")) {
+                                message.guild.members.get(message.author.id).removeRole("408021835280809986");
+                                message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            } else {
+                            }
+                        }  
+                    } else {
+                        if(documento.level < 35){
+                            if (message.member && message.member.roles.get("408022513529126923")) {
+                                message.guild.members.get(message.author.id).removeRole("408022513529126923");
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            } else {
+                            }
+                        }
+                    }
+                }
+            }
+
         } else {
             var pessoa = new database.Users({
                 _id: message.author.id,
