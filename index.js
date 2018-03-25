@@ -405,28 +405,28 @@ client.on("message", message => {
                     message.guild.members.get(message.author.id).removeRole("406606800205643776");
                     message.guild.members.get(message.author.id).removeRole("408021835280809986");
                     message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                    message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                    message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                 } else {
                     if (message.member && message.member.roles.get("406606800205643776")) {
                         message.guild.members.get(message.author.id).removeRole("406605416009695253");
                         message.guild.members.get(message.author.id).removeRole("406606800205643776");
                         message.guild.members.get(message.author.id).removeRole("408021835280809986");
                         message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                     } else {
                         if (message.member && message.member.roles.get("408021835280809986")) {
                             message.guild.members.get(message.author.id).removeRole("406605416009695253");
                             message.guild.members.get(message.author.id).removeRole("406606800205643776");
                             message.guild.members.get(message.author.id).removeRole("408021835280809986");
                             message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                         } else {
                             if (message.member && message.member.roles.get("408022513529126923")) {
                                 message.guild.members.get(message.author.id).removeRole("406605416009695253");
                                 message.guild.members.get(message.author.id).removeRole("406606800205643776");
                                 message.guild.members.get(message.author.id).removeRole("408021835280809986");
                                 message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                             } else {
                             }
                         }
@@ -438,19 +438,19 @@ client.on("message", message => {
                         message.guild.members.get(message.author.id).removeRole("406606800205643776");
                         message.guild.members.get(message.author.id).removeRole("408021835280809986");
                         message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                        message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                     } else {
                         if (message.member && message.member.roles.get("408021835280809986")) {
                             message.guild.members.get(message.author.id).removeRole("406606800205643776");
                             message.guild.members.get(message.author.id).removeRole("408021835280809986");
                             message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                         } else {
                             if (message.member && message.member.roles.get("408022513529126923")) {
                                 message.guild.members.get(message.author.id).removeRole("406606800205643776");
                                 message.guild.members.get(message.author.id).removeRole("408021835280809986");
                                 message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                             } else {
                             }  
                         }
@@ -460,12 +460,12 @@ client.on("message", message => {
                         if (message.member && message.member.roles.get("408021835280809986")) {
                             message.guild.members.get(message.author.id).removeRole("408021835280809986");
                             message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                            message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                         } else {
                             if (message.member && message.member.roles.get("408022513529126923")) {
                                 message.guild.members.get(message.author.id).removeRole("408021835280809986");
                                 message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                             } else {
                             }
                         }  
@@ -473,7 +473,7 @@ client.on("message", message => {
                         if(documento.level < 35){
                             if (message.member && message.member.roles.get("408022513529126923")) {
                                 message.guild.members.get(message.author.id).removeRole("408022513529126923");
-                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injust, vip removido.`);
+                                message.channel.sendMessage(`**:warning: Anti-Trapaça:** O usuário ${message.author.username} adiquiriu vip de forma injusta, vip removido.`);
                             } else {
                             }
                         }
