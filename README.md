@@ -4,13 +4,15 @@
 # Athenos - 0.4.7
 > A JavaScript bot for Discord
 
+# Caution
+
+> This bot is unique to the Athenos server, all its channels are configured for such a server, not an early attempt to copy.
+
 
 ## Usage
 
-Commands for this bot follow this structure: `!dbg <command> [argument]`.
+Commands for this bot follow this structure: `a! [argument]`.
 
 | Command | Description
 |---------|-------------|
-| `!dbg add organization/repository` | Subscribes this channel to the given repository. |
-| `!dbg remove organization/repository` | Removes this channel's subscription to the given repository. |
-| `!dbg help` | Displays usage instructions. |
+| `a!help` | See all available commands. |
