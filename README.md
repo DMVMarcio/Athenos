@@ -17,4 +17,7 @@ Commands for this bot follow this structure: `a! [argument]`.
 |---------|-------------|
 | `a!help` | See all available commands. |
 
-![alt text](https://i.imgur.com/4JaNmFp.png)
+<p align="center">
+  <img src="https://i.imgur.com/4JaNmFp.png" width="350"/>
+  <img src="https://i.imgur.com/4JaNmFp.png" width="350"/>
+</p>
