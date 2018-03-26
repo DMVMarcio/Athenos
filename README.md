@@ -2,20 +2,21 @@
 ![codecov](https://codecov.io/gh/Snuffinho/athenos708119159/branch/develop/graph/badge.svg)
 
 # Athenos - 1.1.2
-> A JavaScript bot for Discord
+> Um bot feito em JavaScript para o Discord
 
-# Caution
+# Aviso
 
-> This bot is unique to the Athenos server, all its channels are configured for such a server, not an early attempt to copy.
+> Este bot é exclusivo para o servidor Athenos, todos os seus canais estão configurados para tal servidor, não adianta tentar copiar.
 
 
 ## Usage
 
-Commands for this bot follow this structure: `a! [argument]`.
 
-| Command | Description
+Comandos para este bot seguem essa estrutura: `a! [argument]`.
+
+| Comando | Descrição
 |---------|-------------|
-| `a!help` | See all available commands. |
+| `a!help` | Veja todos os comandos disponiveis. |
 
 <p align="center">
   <img src="https://i.imgur.com/4JaNmFp.png" width="350"/>
