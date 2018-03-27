@@ -10,8 +10,8 @@ Nós amamos sua entrada! Queremos tornar a contribuição para este projeto o ma
 ## Desenvolvemos com o Github
 Usamos o github para hospedar o código, rastrear problemas e solicitações de recursos, bem como aceitar solicitações de contribui.
 
-## So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
+## Assim, todas as alterações no código acontecem por meio de solicitações de pull
+As solicitações para pull são a melhor maneira de propor alterações na base de código (usamos [Github Flow] (https://guides.github.com/introduction/flow/index.html)). Nós ativamente recebemos seus pedidos de pull:
 
 
 1. Bifurque o repositório e crie seu folder de `master`.
