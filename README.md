@@ -1,5 +1,4 @@
 [![codecov](https://codecov.io/gh/DMVMarcio/Athenos/branch/master/graph/badge.svg)](https://codecov.io/gh/DMVMarcio/Athenos)
-[![codecov](https://codecov.io/gh/Snuffinho/athenos708119159/branch/master/graph/badge.svg)](https://codecov.io/gh/Snuffinho/athenos708119159)
 
 # Athenos - 1.1.3
 > Um bot feito em JavaScript para o Discord
