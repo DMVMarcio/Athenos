@@ -1,7 +1,7 @@
 ![Build Status](https://travis-ci.org/Snuffinho/athenos708119159.svg?branch=develop)
-![codecov](https://codecov.io/gh/Snuffinho/athenos708119159/branch/develop/graph/badge.svg)
+[![codecov](https://codecov.io/gh/Snuffinho/athenos708119159/branch/master/graph/badge.svg)](https://codecov.io/gh/Snuffinho/athenos708119159)
 
-# Athenos - 1.1.2
+# Athenos - 1.1.3
 > Um bot feito em JavaScript para o Discord
 
 # Aviso
