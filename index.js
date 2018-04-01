@@ -1109,7 +1109,7 @@ client.on("message", message => {
 
             var unbug = 100 * documento.msglevel
             var unbug2 = 10 * documento.mensagens
-            if(documento.msglevel < 14) {
+            if(documento.msglevel < 16) {
             if (documento.mensagens > unbug) {
                 documento.coins += 10 * documento.mensagens
                 documento.msglevel += 1
@@ -1122,7 +1122,7 @@ client.on("message", message => {
             }
         } else {
             documento.msglevel = 0
-            documento.mensagens = 0
+            documento.menagens = 0
             documento.save()
         }
 

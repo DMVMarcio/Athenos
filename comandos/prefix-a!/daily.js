@@ -1,6 +1,6 @@
 var database = require("../../database.js")
 var dayCol = new Set()
-let dayRDM = Math.round(Math.random() * 15000)
+var dayRDM = Math.round(Math.random() * 15000)
 
 exports.run = (client, message, args) => {
 
