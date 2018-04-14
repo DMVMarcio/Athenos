@@ -209,14 +209,6 @@ client.on("message", (message) => {
     }
 
     if (message.content.startsWith("")) {
-        if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402588212490534933").id) {
-            setTimeout(function() {
-                message.delete();
-            }, 5000)
-        }
-    }
-
-    if (message.content.startsWith("")) {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402608271153823754").id) {
             setTimeout(function() {
                 message.delete();
@@ -1072,56 +1064,6 @@ client.on("message", message => {
         }
     });
 });
-
-client.on("message", message => {
-
-    if (message.author.bot) return;
-
-    database.Users.findOne({
-        "_id": message.author.id
-    }, function(erro, documento) {
-        if (documento) {
-
-            var unbug = 100 * documento.msglevel
-            var unbug2 = 10 * documento.mensagens
-            if(documento.msglevel < 16) {
-            if (documento.mensagens > unbug) {
-                documento.coins += 10 * documento.mensagens
-                documento.msglevel += 1
-                documento.conquistas += 1
-                documento.save();
-                message.reply(`**Você ganhou ${unbug2} coins por enviar ${documento.mensagens} mensagens.**`);
-            } else {
-                documento.mensagens += 1
-                documento.save();
-            }
-        } else {
-            documento.msglevel = 0
-            documento.menagens = 0
-            documento.save()
-        }
-
-        } else {
-            var pessoa = new database.Users({
-                _id: message.author.id,
-                level: 0,
-                xp: 0,
-                coins: 0,
-                conquistas: 0,
-                mensagens: 0,
-                msglevel: 0,
-                invitetru: false,
-                invitecode: "Nenhum",
-                invitou: 0,
-                warn: 0,
-                rep: 0
-            })
-
-            pessoa.save()
-        }
-    })
-
-})
 
 async function getEval(message, args) {
     if (message.content.includes("token")) return message.reply("**Ta doidão?**");
