@@ -13,19 +13,9 @@ const fs = require('fs');
 
 client.on('guildMemberAdd', member => {
 
-    client.guilds.get("399756948951662592").members.get(member.id).addRole(client.guilds.get("399756948951662592").roles.get("399761217125613589"));
-    client.guilds.get("399756948951662592").channels.get("402588212490534933").sendMessage(`**<@${member.id}>, Faça oque se pede acima ou kick! :no_mouth:**`);
-    setTimeout(function() {
-        if (member.guild.members.get(member.id)) {
-            if (member.guild.members.get(member.id).roles.get("399761217125613589")) {
-                client.guilds.get("399756948951662592").members.get(member.id).kick()
-            } else {
-
-            }
-        } else {
-
-        }
-    }, 5 * 60 * 1000)
+    client.guilds.get("399756948951662592").members.get(member.id).addRole(client.guilds.get("399756948951662592").roles.get("399758046949277696"));
+    var mensagens = ["Eu faço tão pouco exercício, que se você me ver correndo, corre também que alguma coisa deu errado.", "Antes tarde do que mais tarde.", "Quem não deve, não deve.", "Agua mole em pedra dura, tanto bate... até que cansa!", "Quando um não quer... o outro insiste!", "Diz-me com quem andas e te direi se vou contigo.", "Evite acidentes. Faça de propósito.", "Onde quer que vc esteja vc sempre estará lá.", "O alcool é o maior inimigo do homem... e o homem que foge de seus inimigos é um covarde!", "Tudo nessa vida passa, até uva passa.", "Mais vale um peido na mão do que dois cheirando.", "Se gravidez tem 9 meses, por que não se chama gravinove?", "Pareço normal, mas já conectei o pen drive no carregador pra ver se carrega mais memória.", "Se o Flamengo é o maior do Rio, quem é o maior do Mar?", "Se você se sente um idiota, lembre-se que tem gente que gasta dinheiro com Cartola FC.", "Eu não sou idiota, mas se leu isso, fica por favor.", "Você sabia que o papel de plástico é feito de plástico, mas o papel de parede não é feito de parede?", "Bem vindo, Estávamos te esperando ( ͡° ͜ʖ ͡°)"]
+    client.guilds.get("399756948951662592").channels.get("402601119320244236").sendMessage("**<@" + member.user.id + ">, " + mensagens[Math.round(Math.random() * mensagens.length - 1)] + "**");
 
 })
 
@@ -203,21 +193,6 @@ client.on("ready", () => {
 client.login(process.env.token)
 
 client.on("message", (message) => {
-
-    var mensagens = ["Eu faço tão pouco exercício, que se você me ver correndo, corre também que alguma coisa deu errado.", "Antes tarde do que mais tarde.", "Quem não deve, não deve.", "Agua mole em pedra dura, tanto bate... até que cansa!", "Quando um não quer... o outro insiste!", "Diz-me com quem andas e te direi se vou contigo.", "Evite acidentes. Faça de propósito.", "Onde quer que vc esteja vc sempre estará lá.", "O alcool é o maior inimigo do homem... e o homem que foge de seus inimigos é um covarde!", "Tudo nessa vida passa, até uva passa.", "Mais vale um peido na mão do que dois cheirando.", "Se gravidez tem 9 meses, por que não se chama gravinove?", "Pareço normal, mas já conectei o pen drive no carregador pra ver se carrega mais memória.", "Se o Flamengo é o maior do Rio, quem é o maior do Mar?", "Se você se sente um idiota, lembre-se que tem gente que gasta dinheiro com Cartola FC.", "Eu não sou idiota, mas se leu isso, fica por favor.", "Você sabia que o papel de plástico é feito de plástico, mas o papel de parede não é feito de parede?", "Bem vindo, Estávamos te esperando ( ͡° ͜ʖ ͡°)"]
-    if (message.content.startsWith("ATH")) {
-        if (message.guild.members.get(message.author.id).roles.find("name", '❄ VERIFICAR ❄')) {
-            if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402588212490534933").id) {
-                message.guild.members.get(message.author.id).addRole("399758046949277696");
-                message.guild.members.get(message.author.id).removeRole("399761217125613589");
-                message.guild.channels.get("402601119320244236").sendMessage("**<@" + message.author.id + ">, " + mensagens[Math.round(Math.random() * mensagens.length - 1)] + "**");
-            } else {
-                message.reply("**Aqui não é lugar para se verificar! 🔔**");
-            }
-        } else {
-            message.reply("**Você já está verificado!**");
-        }
-    }
 
     if (message.content.startsWith("a!notificar")) {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402608271153823754").id) {
