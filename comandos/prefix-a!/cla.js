@@ -6,8 +6,6 @@ exports.run = (client, message, args) => {
     let razaod = args.slice(1).join(' ');
     let razaot = args.slice(2).join(' ');
 
-    var userCOL = new Set()
-
     database.Users.findOne({
         "_id": message.author.id
     }, function(erro, documento) {
@@ -112,9 +110,6 @@ exports.run = (client, message, args) => {
                                                                                                                                 _nome: message.content.replace("a!cla criar ", ""),
                                                                                                                                 imagem: "https://i.imgur.com/4JaNmFp.png",
                                                                                                                                 dono: message.author.id,
-                                                                                                                                trofeus: 0,
-                                                                                                                                vitorias: 0,
-                                                                                                                                derrotas: 0,
                                                                                                                                 public: false,
                                                                                                                                 points: 0,
                                                                                                                                 coins: 0,
@@ -901,7 +896,7 @@ exports.run = (client, message, args) => {
 
             pessoa.save()
         }
-        
+
     })
 
 }

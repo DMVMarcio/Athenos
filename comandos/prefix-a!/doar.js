@@ -13,7 +13,6 @@ exports.run = (client, message, args) => {
 
             if (message.mentions.users.size < 1) return message.reply("**Mencione alguem para doar dinheiro!**");
             if (message.mentions.users.first().id == message.author.id) return message.reply("**Você não pode doar para você mesmo!**");
-            if (message.mentions.users.first().bot) return message.reply("**Você não pode doar para um bot!**");
             if (!razaod.length < 1) {
                 if (parseInt(args[1]) > 0) {
                 if (args[1] < documento.coins) {
@@ -33,18 +32,10 @@ exports.run = (client, message, args) => {
                         } else {
 
                             var pessoa = new database.Users({
-                                _id: message.author.id,
+                                _id: message.mentions.users.first().id,
                                 level: 0,
                                 xp: 0,
-                                coins: 0,
-                                conquistas: 0,
-                                mensagens: 0,
-                                msglevel: 0,
-                                invitetru: false,
-                                invitecode: "Nenhum",
-                                invitou: 0,
-                                warn: 0,
-                                rep: 0
+                                coins: 0
                             })
 
                             pessoa.save()
@@ -70,15 +61,7 @@ exports.run = (client, message, args) => {
                 _id: message.author.id,
                 level: 0,
                 xp: 0,
-                coins: 0,
-                conquistas: 0,
-                mensagens: 0,
-                msglevel: 0,
-                invitetru: false,
-                invitecode: "Nenhum",
-                invitou: 0,
-                warn: 0,
-                rep: 0
+                coins: 0
             })
             pessoa.save()
         }

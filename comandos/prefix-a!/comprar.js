@@ -25,7 +25,6 @@ exports.run = (client, message, args) => {
     var d7 = 15030 - documento.coins
     var d8 = 5001 - documento.coins
     var d9 = 42501 - documento.coins
-    var d10 = 25607 - documento.coins
 
   if (documento) {
 
@@ -120,7 +119,7 @@ if (message.content.startsWith("a!comprar 4")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405069427894386688")){
 
-        message.reply("**Você já tem XP x2!**");
+        message.reply("**Você já é tem XP x2!**");
 
     } else {
 
@@ -149,7 +148,7 @@ if (message.content.startsWith("a!comprar 5")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405070139738816532")){
 
-        message.reply("**Você já tem Coins x2!**");
+        message.reply("**Você já é tem Coins x2!**");
 
     } else {
 
@@ -178,7 +177,7 @@ if (message.content.startsWith("a!comprar 6")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405084942255521813")){
 
-        message.reply("**Você já tem Permissão para divulgar!**");
+        message.reply("**Você já é tem Permissão para divulgar!**");
 
     } else {
 
@@ -236,7 +235,7 @@ if (message.content.startsWith("a!comprar 8")) {
 
     if(message.guild.members.get(message.author.id).roles.get("405068787486818304")){
 
-        message.reply("**Você já tem Comando de Lembrete!**");
+        message.reply("**Você já é tem Comando de Lembrete!**");
 
     } else {
 
@@ -290,52 +289,15 @@ if (message.content.startsWith("a!comprar 9")) {
 
 }
 
-if (message.content.startsWith("a!comprar 10")) {
-
-    if(message.guild.members.get(message.author.id).roles.get("419990025342550017")){
-
-        message.reply("**Você já tem o canal NSFW!**");
-
-    } else {
-
-    if(documento.coins > 42500) {
-
-        documento.coins -= 25607
-        documento.save();
-        docs.coins += 25607
-        docs.save();
-        docu.coins += 25607
-        docu.save();
-        message.guild.members.get(message.author.id).addRole("419990025342550017");
-        message.reply("**Compra feita com sucesso! :money_mouth:**");
-
-    } else {
-
-        message.reply("**Dinheiro insuficiente! :pensive: Você precisa de mais " + d10 + " coins!**");
-
-    }
-
-}
-
-}
-
   } else {
   
 
     var pessoa = new database.Users({
-        _id: message.author.id,
-        level: 0,
-        xp: 0,
-        coins: 0,
-        conquistas: 0,
-        mensagens: 0,
-        msglevel: 0,
-        invitetru: false,
-        invitecode: "Nenhum",
-        invitou: 0,
-        warn: 0,
-        rep: 0
-    })
+      _id: message.author.id,
+      level: 0,
+      xp: 0,
+      coins: 0
+  })
 
   pessoa.save()
 

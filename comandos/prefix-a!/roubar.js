@@ -1,6 +1,6 @@
 var database = require("../../database.js")
 var dayCol = new Set()
-let dayRDM = Math.round(Math.random() * 2500)
+let dayRDM = Math.round(Math.random() * 3500)
 
 exports.run = (client, message, args) => {
 
@@ -26,8 +26,6 @@ exports.run = (client, message, args) => {
 
                     if (doc2) {
 
-                        if(doc2.coins > 25000) {
-
                         if (Math.round(Math.random() * 1) == 1) {
 
                             documento.coins += dayRDM
@@ -51,24 +49,12 @@ exports.run = (client, message, args) => {
                         }
 
                     } else {
-                        message.reply("**Este usuário é muito pobre para ser roubado. :confused:**");
-                    }
-
-                    } else {
 
                         var pessoa = new database.Users({
                             _id: message.mentions.users.first().id,
                             level: 0,
                             xp: 0,
-                            coins: 0,
-                            conquistas: 0,
-                            mensagens: 0,
-                            msglevel: 0,
-                            invitetru: false,
-                            invitecode: "Nenhum",
-                            invitou: 0,
-                            warn: 0,
-                            rep: 0
+                            coins: 0
                         })
 
                         pessoa.save()
@@ -81,15 +67,7 @@ exports.run = (client, message, args) => {
                         _id: message.author.id,
                         level: 0,
                         xp: 0,
-                        coins: 0,
-                        conquistas: 0,
-                        mensagens: 0,
-                        msglevel: 0,
-                        invitetru: false,
-                        invitecode: "Nenhum",
-                        invitou: 0,
-                        warn: 0,
-                        rep: 0
+                        coins: 0
                     })
 
                     pessoa.save()
