@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   message.channel.sendMessage("<@&399759520089374720> :arrow_down: :arrow_down: <@&399759520089374720>");
   message.channel.sendMessage({
       "embed": {
-        "description": `ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ ANUNCIO ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n${message.content.replace("a!anun ")}`,
+        "description": `ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ ANUNCIO ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n${message.content.replace("a!anun ", "")}`,
         "url": "https://discordapp.com",
         "color": 55512,
         "thumbnail": {
