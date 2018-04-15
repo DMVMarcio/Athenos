@@ -146,7 +146,7 @@ exports.run = (client, message, args) => {
         } else {
             message.channel.sendMessage({
                 "embed": {
-                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/9WUTx4A\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo que deseja>\na!icode delete\na!icode usar <codigo de quem lhe convidou>\na!icode top```",
+                  "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ INVITE CODE ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Link de convite:** https://discord.gg/Ez8PyvA\nㅤ\n**Com os comandos a seguir, você poderá criar um codigo de convite que as pessoas que voce convidou poderão usar, e você ganhará coisas em troca.\nㅤ\nComo usar:**```\na!icode create <codigo que deseja>\na!icode delete\na!icode usar <codigo de quem lhe convidou>\na!icode top```",
                   "color": 55512,
                   "thumbnail": {
                     "url": "https://i.imgur.com/4JaNmFp.png"
