@@ -209,7 +209,7 @@ client.on("message", (message) => {
     }
 
     if (message.content.startsWith("a!program")) {
-            if (!message.guild.members.get(message.author.id).roles.find("name", '💻 PROGRAMADOR 💻')) {
+            if (!message.guild.members.get(message.author.id).roles.find("name", '💻 PROGRAMADOR(a) 💻')) {
                 message.reply("**Categoria liberada.**");
                 message.guild.members.get(message.author.id).addRole("425004539855241226");
             } else {
