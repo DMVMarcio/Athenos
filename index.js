@@ -208,6 +208,16 @@ client.on("message", (message) => {
         }
     }
 
+    if (message.content.startsWith("a!program")) {
+            if (!message.guild.members.get(message.author.id).roles.find("name", '💻 PROGRAMADOR 💻')) {
+                message.reply("**Categoria liberada.**");
+                message.guild.members.get(message.author.id).addRole("425004539855241226");
+            } else {
+                message.reply("**Categoria removida.**");
+                message.guild.members.get(message.author.id).removeRole("425004539855241226");
+            }
+    }
+
     if (message.content.startsWith("")) {
         if (message.channel.id == client.guilds.get("399756948951662592").channels.get("402608271153823754").id) {
             setTimeout(function() {
@@ -295,6 +305,7 @@ client.on("message", (message) => {
     }
 
     if (message.content.includes("<@402607667039698944>")) {
+        if (message.author.bot) return;
         message.reply("**Use a!help para saber meus comandos. :wink:**");
     }
 
